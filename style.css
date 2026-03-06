@@ -234,6 +234,30 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+/* Social Icons */
+.social-icon {
+    width: 28px;
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Dark mode icon fix */
+[data-theme="dark"] .social-icon[alt="GitHub"],
+[data-theme="dark"] .social-icon[alt="X"] {
+    filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .social-icon[alt="GitHub"],
+    html:not([data-theme="light"]) .social-icon[alt="X"] {
+        filter: invert(1);
+    }
+}
+
 /* Research & Outreach Cards */
 .research-grid, .outreach-grid {
     display: grid;
