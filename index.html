@@ -20,7 +20,7 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#cv">CV</a></li>
                 <li><a href="#outreach">Outreach</a></li>
-                <li><a href="#personal">Personal</a></li>
+                <li><a href="#personal">Personal Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button id="theme-toggle" aria-label="Toggle dark mode">
@@ -87,9 +87,8 @@
                 <div class="research-grid">
                     <div class="research-card">
                         <h3>Circumgalactic Medium and Intergalactic Medium</h3>
-                        <p>Studying the multiphase structure of the circumgalactic medium using quasar absorption
-                            spectroscopy in order to understand galaxy evolution, gas accretion, and feedback processes
-                            in galaxies.</p>
+                        <p>Studying the circumgalactic medium using quasar absorption line spectroscopy to understand
+                            galaxy evolution, gas accretion, outflows, and feedback processes in galaxies.</p>
                     </div>
                     <div class="research-card">
                         <h3>Galaxy&ndash;Absorber Connections</h3>
@@ -221,8 +220,10 @@
                             <p class="cv-advisor">Indian Institute of Astrophysics (IIA)</p>
                             <p><strong>Topic:</strong> Transiting Exoplanetary Atmospheres &ndash; Spectroscopic
                                 Reduction and Observational Techniques</p>
-                            <p>Work involved spectroscopic data reduction of FITS files using IRAF and scientific
-                                Python.</p>
+                            <p>Performed end-to-end spectroscopic reduction of ground-based observations of two hot
+                                Jupiter exoplanets (HAT-P1-b and WASP-33b) using IRAF, including bias subtraction,
+                                flat-field correction, aperture extraction, and wavelength calibration, followed by
+                                transit light curve fitting and MCMC parameter estimation using pylightcurve.</p>
                         </div>
                     </div>
                     <div class="cv-entry">
@@ -240,7 +241,10 @@
                 <div class="cv-section">
                     <h3>Technical Skills</h3>
                     <ul style="list-style-position: inside; margin-top: 1rem; line-height: 1.8;">
-                        <li><strong>Python</strong> &ndash; scientific computing and astrophysical data analysis</li>
+                        <li><strong>Python</strong> &ndash; scientific computing, spectral analysis, and data reduction
+                        </li>
+                        <li><strong>Specialised Tools</strong> &ndash; GalPaK3D, Prospector, BAGPIPES, Cloudy, emcee
+                        </li>
                         <li><strong>IRAF / PyRAF</strong> &ndash; spectral reduction and analysis</li>
                         <li><strong>LaTeX</strong> &ndash; scientific document preparation</li>
                         <li><strong>Maxima</strong> &ndash; mathematical computation</li>
@@ -275,7 +279,7 @@
 
         <section id="personal" class="section bg-secondary">
             <div class="container">
-                <h2>Personal</h2>
+                <h2>Personal Interests</h2>
                 <p>Outside my academic research, I have a strong passion for acting and music. I have acted in Kannada
                     films and television serials in addition to my work in astronomy. Some of my acting work includes
                     the following productions.</p>
@@ -355,6 +359,28 @@
             <p>&copy; <span id="current-year"></span> Sumukha R Bharadwaj. All rights reserved.</p>
         </div>
     </footer>
+
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2>Telescope & Outreach Sessions</h2>
+        </div>
+        <div class="gallery-wrapper">
+            <button id="gallery-prev" class="gallery-nav prev" aria-label="Previous images">&lsaquo;</button>
+            <div class="gallery-container">
+                <div class="gallery-track" id="gallery-track">
+                    <!-- Images will be injected here via JavaScript -->
+                </div>
+            </div>
+            <button id="gallery-next" class="gallery-nav next" aria-label="Next images">&rsaquo;</button>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button id="lightbox-prev" class="lightbox-nav prev" aria-label="Previous image">&lsaquo;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery view">
+        <button id="lightbox-next" class="lightbox-nav next" aria-label="Next image">&rsaquo;</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
