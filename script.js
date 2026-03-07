@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Set initial theme
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        html.setAttribute('data-theme', 'dark');
-        updateThemeIcons('dark');
-    } else {
+    // Set initial theme (Dark Mode by Default)
+    if (savedTheme === 'light') {
         html.setAttribute('data-theme', 'light');
         updateThemeIcons('light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        updateThemeIcons('dark');
     }
 
     // Toggle click event
@@ -419,4 +419,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, { passive: false });
     }
+
+    // Intersection Observer for scroll fade-in
+    const fadeSections = document.querySelectorAll('.section:not(#home)');
+    fadeSections.forEach(section => {
+        section.classList.add('section-fade');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    fadeSections.forEach(section => {
+        observer.observe(section);
+    });
 });
