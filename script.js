@@ -138,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
+                targetElement.classList.add('visible');
+                document.querySelectorAll('.section-fade').forEach(sec => sec.classList.add('visible'));
                 const headerHeight = header ? header.offsetHeight : 70;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.scrollY - headerHeight;
@@ -489,19 +491,43 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('section-fade');
     });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+    function checkVisibility() {
+        const threshold = window.innerHeight + 150;
+        fadeSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < threshold) {
+                section.classList.add('visible');
             }
         });
-    }, {
-        threshold: 0.08,
-        rootMargin: "0px 0px -40px 0px"
-    });
+    }
 
-    fadeSections.forEach(section => {
-        observer.observe(section);
-    });
+    if (window.location.hash) {
+        const hashTarget = document.querySelector(window.location.hash);
+        if (hashTarget) {
+            hashTarget.classList.add('visible');
+        }
+    }
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.01,
+            rootMargin: "0px 0px 150px 0px"
+        });
+
+        fadeSections.forEach(section => {
+            observer.observe(section);
+        });
+    } else {
+        fadeSections.forEach(section => section.classList.add('visible'));
+    }
+
+    checkVisibility();
+    window.addEventListener('scroll', checkVisibility, { passive: true });
 });
