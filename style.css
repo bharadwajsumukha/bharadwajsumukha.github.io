@@ -570,7 +570,17 @@ html[data-theme="light"] .scene-nebula::after {
 }
 .badge-warning {
     background-color: rgba(255, 193, 7, 0.15);
-    color: #e6a700;
+    color: #b45309;
+}
+[data-theme="dark"] .badge-warning {
+    color: #fbbf24;
+}
+.badge-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: #15803d;
+}
+[data-theme="dark"] .badge-success {
+    color: #4ade80;
 }
 .badge-neutral {
     background-color: var(--bg-color);
