@@ -4,124 +4,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumukha R Bharadwaj &ndash; Astrophysics Research Scholar</title>
+    <title>Sumukha R Bharadwaj &ndash; Astrophysics Research Scholar | IIST</title>
+    <meta name="description" content="Personal academic website of Sumukha R Bharadwaj, PhD Researcher studying the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using quasar absorption line spectroscopy at IIST.">
+    <meta name="author" content="Sumukha R Bharadwaj">
+
+    <!-- Google Fonts: Inter (UI/Body), Newsreader (Academic Serif), JetBrains Mono (Technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Personal website of Sumukha R Bharadwaj, PhD Scholar">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="site-title">Astrophysics Research Scholar</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#software">Software Tools</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#outreach">Outreach</a></li>
-                <li><a href="#personal">Personal Interests</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="theme-toggle" aria-label="Toggle dark mode">
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    style="display: none;">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
-            <button id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Top Sticky / Floating Header -->
+    <header id="site-header">
+        <nav aria-label="Main Navigation">
+            <a href="#home" class="site-brand">
+                <span class="site-title">Sumukha R Bharadwaj</span>
+                <span class="site-subtitle">Astrophysics Scholar &bull; IIST</span>
+            </a>
+
+            <div class="nav-right-group">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#software">Software Tools</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#outreach">Outreach</a></li>
+                    <li><a href="#personal">Personal Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero bg-secondary">
-            <div class="scene-nebula"></div>
-            <div class="hero-content">
-                <div class="profile-image-placeholder">
-                    <img src="profile_photo.png" alt="Profile Photo of Sumukha R Bharadwaj"
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; border-radius: 50%;">
-                </div>
+        <!-- ===================================================================
+             HERO SECTION (High-End Academic Astrophysics Landing)
+             =================================================================== -->
+        <section id="home" class="hero">
+            <div class="hero-atmosphere"></div>
+            <div class="hero-grid"></div>
+
+            <div class="container hero-content">
+                <!-- Left Column: Academic Persona & Statement -->
                 <div class="hero-text">
-                    <h1>Sumukha R Bharadwaj</h1>
-                    <h2>PhD Scholar &ndash; Astronomy and Astrophysics</h2>
-                    <p class="hero-tagline"><em>Tracing the invisible threads that connect galaxies</em></p>
-                    <p class="institution">
-                        Department of Earth and Space Sciences<br>
-                        <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, Thiruvananthapuram<br>
-                        Advisor: <a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank"
-                            rel="noopener noreferrer">Dr Anand Narayanan</a>
-                    </p>
-                    <p class="bio">I am a PhD researcher studying the <a
-                            href="https://www.annualreviews.org/content/journals/10.1146/annurev-astro-091916-055240"
-                            target="_blank" rel="noopener noreferrer">circumgalactic medium (CGM)</a> and intergalactic
-                        medium (IGM) using quasar absorption line spectroscopy. My research focuses on understanding
-                        galaxy evolution through processes such as gas accretion, outflows, and feedback.</p>
-                    <p class="bio" style="margin-top: 1rem;">My work involves analysing quasar absorption systems using
-                        <em>HST</em>&ndash;COS spectroscopy and studying galaxy environments and kinematics using
-                        <em>VLT</em>&ndash;MUSE integral field spectroscopy to investigate galaxy&ndash;absorber
-                        connections.
-                    </p>
-                    <div style="margin-top: 2rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#contact" class="btn" style="margin-top: 0;">&#9993; Contact Me</a>
-                        <a href="#cv" class="btn btn-outline" style="margin-top: 0;">&#128196; View CV</a>
+                    <div class="hero-badge-pill">
+                        <span class="hero-badge-dot"></span>
+                        <span>PhD Scholar &bull; Astronomy &amp; Astrophysics</span>
+                    </div>
+
+                    <h1 class="hero-name">Sumukha R Bharadwaj</h1>
+                    <div class="hero-title">Observational Astrophysics &bull; Quasar Absorption Spectroscopy</div>
+
+                    <div class="hero-affiliation">
+                        <span>Department of Earth and Space Sciences</span>
+                        <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>
+                        <span class="hero-advisor">Advisor: <a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank" rel="noopener noreferrer">Dr Anand Narayanan</a></span>
+                    </div>
+
+                    <div class="hero-tagline-box">
+                        <p class="hero-tagline">&ldquo;Tracing the invisible threads that connect galaxies&rdquo;</p>
+                    </div>
+
+                    <div class="hero-bio">
+                        <p>I am a PhD researcher studying the <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-astro-091916-055240" target="_blank" rel="noopener noreferrer">circumgalactic medium (CGM)</a> and intergalactic medium (IGM) using quasar absorption line spectroscopy. My research focuses on understanding galaxy evolution through processes such as gas accretion, outflows, and feedback.</p>
+                        <p>My work involves analysing quasar absorption systems using <em>HST</em>&ndash;COS spectroscopy and studying galaxy environments and kinematics using <em>VLT</em>&ndash;MUSE integral field spectroscopy to investigate galaxy&ndash;absorber connections.</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">&#9993; Contact Me</a>
+                        <a href="Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">&#128196; View CV (PDF)</a>
+                        <a href="#research" class="btn btn-subtle">Explore Research &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Profile Portrait + Subtle Scientific Vector Motif -->
+                <div class="hero-visual">
+                    <div class="hero-astronomy-motif">
+                        <!-- Atmospheric Halo Glow -->
+                        <div class="hero-halo-glow"></div>
+
+                        <!-- Mathematical Orbital Coordinates & Spectral Sightline SVG -->
+                        <svg class="hero-motif-svg" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Outer Coordinate Ring -->
+                            <circle cx="190" cy="190" r="172" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="4 6" />
+                            <!-- Mid Celestial Ring -->
+                            <circle cx="190" cy="190" r="148" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
+                            
+                            <!-- Elliptical Orbit Paths -->
+                            <ellipse cx="190" cy="190" rx="170" ry="85" stroke="currentColor" stroke-opacity="0.15" stroke-width="1" transform="rotate(-28 190 190)" stroke-dasharray="3 4" />
+                            <ellipse cx="190" cy="190" rx="165" ry="60" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" transform="rotate(32 190 190)" />
+
+                            <!-- Sightline Dispersion Axis across the halo -->
+                            <line x1="10" y1="190" x2="370" y2="190" stroke="var(--sightline-color)" stroke-width="1.2" stroke-dasharray="2 3" />
+                            <circle cx="28" cy="190" r="3" fill="var(--accent-primary)" />
+                            <circle cx="352" cy="190" r="3" fill="var(--accent-primary)" />
+
+                            <!-- Simulated Spectral Absorption Ticks -->
+                            <line x1="70" y1="184" x2="70" y2="196" stroke="var(--accent-primary)" stroke-width="1.5" />
+                            <line x1="110" y1="186" x2="110" y2="194" stroke="var(--accent-primary)" stroke-width="1" />
+                            <line x1="270" y1="185" x2="270" y2="195" stroke="var(--accent-secondary)" stroke-width="1.5" />
+                            <line x1="310" y1="186" x2="310" y2="194" stroke="var(--accent-primary)" stroke-width="1" />
+
+                            <!-- Coordinate Markers -->
+                            <circle cx="190" cy="18" r="2.5" fill="currentColor" fill-opacity="0.4" />
+                            <circle cx="190" cy="362" r="2.5" fill="currentColor" fill-opacity="0.4" />
+                        </svg>
+
+                        <!-- Profile Portrait Frame -->
+                        <div class="hero-portrait-frame">
+                            <img src="profile_photo.png" alt="Profile Photo of Sumukha R Bharadwaj" class="hero-portrait-img">
+                        </div>
+
+                        <!-- Technical Metadata Chip -->
+                        <div class="hero-portrait-badge">
+                            <span class="badge-icon">&#9672;</span>
+                            <span>HST/COS &bull; VLT/MUSE &bull; CGM</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===================================================================
+             RESEARCH SECTION (Intellectual Core of the Portfolio)
+             =================================================================== -->
         <section id="research" class="section">
             <div class="container">
-                <h2>Research Areas</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <h3>Circumgalactic Medium and Intergalactic Medium</h3>
-                        <p>Studying the circumgalactic medium using quasar absorption line spectroscopy to understand
-                            galaxy evolution, gas accretion, outflows, and feedback processes in galaxies.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Galaxy&ndash;Absorber Connections</h3>
-                        <p>Using <em>VLT</em>&ndash;MUSE integral field spectroscopy to identify galaxies associated
-                            with absorption systems and study galaxy kinematics and environments to determine whether
-                            absorbers trace inflows, outflows, or extended circumgalactic gas.</p>
+                <div class="section-header">
+                    <div class="section-label">Observational Research</div>
+                    <h2 class="section-title">Research Areas &amp; Projects</h2>
+                    <p class="section-description">Investigating the multi-phase circumgalactic medium through high-resolution UV space spectroscopy and optical integral field kinematics.</p>
+                </div>
+
+                <!-- Conceptual Synthesis Pathway -->
+                <div class="research-synthesis-bar">
+                    <span class="synthesis-label">Core Pipeline:</span>
+                    <div class="synthesis-flow">
+                        <span class="synthesis-step">Quasar Absorption Spectroscopy</span>
+                        <span class="synthesis-arrow">&rarr;</span>
+                        <span class="synthesis-step">CGM / IGM Multiphase Gas</span>
+                        <span class="synthesis-arrow">&rarr;</span>
+                        <span class="synthesis-step">Galaxy Environments &amp; Kinematics</span>
+                        <span class="synthesis-arrow">&rarr;</span>
+                        <span class="synthesis-step">Galaxy Evolution &amp; Baryon Cycle</span>
                     </div>
                 </div>
 
-                <div style="margin-top: 3.5rem;">
-                    <h2>Current Research Projects</h2>
-                    <div class="project-grid" style="margin-top: 1.5rem;">
-                        <div class="project-card">
-                            <div class="project-icon emerald-tint">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H15"></path><path d="M10 9H14"></path><path d="M3.73 18.06A7.05 7.05 0 0 1 12 12a7.05 7.05 0 0 1 8.27 6.06L21 21H3c.27-1.39.73-2.78 1.4-4.06z"></path><path d="M12 12V3"></path></svg>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Project 1</div>
-                                <div class="project-desc">Ne VIII absorbers in quasar spectra.</div>
+                <!-- Research Areas Cards -->
+                <div class="research-areas-grid">
+                    <div class="research-concept-card">
+                        <div class="concept-badge">Spectroscopic Diagnostics</div>
+                        <h3 class="concept-title">Circumgalactic Medium and Intergalactic Medium</h3>
+                        <p class="concept-desc">Studying the circumgalactic medium using quasar absorption line spectroscopy to understand galaxy evolution, gas accretion, outflows, and feedback processes in galaxies.</p>
+                        <div class="concept-tags">
+                            <span class="research-tag">CGM</span>
+                            <span class="research-tag">IGM</span>
+                            <span class="research-tag">Quasar Absorption</span>
+                            <span class="research-tag">Gas Accretion</span>
+                            <span class="research-tag">Outflows</span>
+                            <span class="research-tag">Baryon Cycle</span>
+                        </div>
+                    </div>
+
+                    <div class="research-concept-card">
+                        <div class="concept-badge">Integral Field Spectroscopy</div>
+                        <h3 class="concept-title">Galaxy&ndash;Absorber Connections</h3>
+                        <p class="concept-desc">Using <em>VLT</em>&ndash;MUSE integral field spectroscopy to identify galaxies associated with absorption systems and study galaxy kinematics and environments to determine whether absorbers trace inflows, outflows, or extended circumgalactic gas.</p>
+                        <div class="concept-tags">
+                            <span class="research-tag">VLT/MUSE</span>
+                            <span class="research-tag">HST/COS</span>
+                            <span class="research-tag">Galaxy Kinematics</span>
+                            <span class="research-tag">Inflows &amp; Outflows</span>
+                            <span class="research-tag">Pair Halos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Projects -->
+                <div class="projects-header">
+                    <h3 class="projects-title">Current Research Projects</h3>
+                    <p class="projects-subtitle">Active investigative projects utilizing space- and ground-based spectroscopic datasets.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 3H15"></path>
+                                <path d="M10 9H14"></path>
+                                <path d="M3.73 18.06A7.05 7.05 0 0 1 12 12a7.05 7.05 0 0 1 8.27 6.06L21 21H3c.27-1.39.73-2.78 1.4-4.06z"></path>
+                                <path d="M12 12V3"></path>
+                            </svg>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta-pill">Project 1</div>
+                            <h4 class="project-title">Ne VIII Absorbers in Quasar Spectra</h4>
+                            <p class="project-desc">Investigating warm-hot circumgalactic gas in galaxy pair halos and group environments traced by Ne VIII and O VI absorption lines in quasar spectra.</p>
+                            <div class="project-tags">
+                                <span class="research-tag">HST/COS</span>
+                                <span class="research-tag">VLT/MUSE</span>
+                                <span class="research-tag">Ne VIII</span>
+                                <span class="research-tag">O VI</span>
+                                <span class="research-tag">Warm-Hot Gas</span>
                             </div>
                         </div>
-                        <div class="project-card">
-                            <div class="project-icon emerald-tint">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"></path></svg>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Project 2</div>
-                                <div class="project-desc">Weak Mg II absorbers and their environments using large spectroscopic survey datasets.</div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                                <path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta-pill">Project 2</div>
+                            <h4 class="project-title">Weak Mg II Absorbers &amp; Environments</h4>
+                            <p class="project-desc">Weak Mg II absorbers and their environments using large spectroscopic survey datasets to probe cool low-redshift circumgalactic gas distributions.</p>
+                            <div class="project-tags">
+                                <span class="research-tag">Spectroscopic Surveys</span>
+                                <span class="research-tag">Mg II</span>
+                                <span class="research-tag">Low Redshift</span>
+                                <span class="research-tag">CGM Kinematics</span>
                             </div>
                         </div>
                     </div>
@@ -129,323 +266,499 @@
             </div>
         </section>
 
+        <!-- ===================================================================
+             SOFTWARE TOOLS SECTION (Scientific Software Showcase)
+             =================================================================== -->
         <section id="software" class="section bg-secondary">
-            <div class="container" style="text-align: center;">
-                <h2>Software Tools</h2>
-                <div class="software-card">
-                    <div class="software-header">
-                        <div class="software-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="m17 5-5-3-5 3v14l5 3 5-3z"></path><path d="m2 12 10-6"></path><path d="m22 12-10-6"></path></svg>
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Scientific Software</div>
+                    <h2 class="section-title">Cosmology Calculator</h2>
+                    <p class="section-description">A portable scientific tool implementing the standard &Lambda;CDM cosmological framework for computing observational cosmological metrics.</p>
+                </div>
+
+                <div class="software-showcase-card">
+                    <div class="software-card-header">
+                        <div class="software-app-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20"></path>
+                                <path d="m17 5-5-3-5 3v14l5 3 5-3z"></path>
+                                <path d="m2 12 10-6"></path>
+                                <path d="m22 12-10-6"></path>
+                            </svg>
                         </div>
-                        <div class="software-title-area">
-                            <h3>Cosmology Calculator</h3>
-                            <p>A Flutter-based cosmological calculator implementing the &Lambda;CDM cosmological model.</p>
-                            <div class="software-tags">
-                                <span class="calc-tag">Flutter</span>
-                                <span class="calc-tag">&Lambda;CDM</span>
-                                <span class="calc-tag">Cosmology</span>
+                        <div class="software-header-body">
+                            <div class="software-header-top">
+                                <h3 class="software-app-name">Cosmology Calculator</h3>
+                                <div class="software-tags-row">
+                                    <span class="software-chip">Flutter</span>
+                                    <span class="software-chip">&Lambda;CDM</span>
+                                    <span class="software-chip">Cosmology</span>
+                                    <span class="software-chip">Android</span>
+                                </div>
                             </div>
+                            <p class="software-summary">A Flutter-based cosmological calculator implementing the standard &Lambda;CDM cosmological model for rapid computation of distances, lookback times, and thermodynamic scaling parameters across cosmic epochs.</p>
                         </div>
                     </div>
-                    
-                    <div class="software-body">
-                        <div class="software-body-heading">COMPUTED QUANTITIES</div>
-                        <div class="software-grid">
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> Age of the Universe</div>
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> Lookback Time</div>
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> Comoving Distance</div>
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> Angular Diameter Distance</div>
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> Luminosity Distance</div>
-                            <div class="calc-tile"><span class="calc-icon">🌐</span> CMB Temperature scaling</div>
+
+                    <div class="software-card-body">
+                        <div class="software-metrics-heading">Computed Cosmological Quantities</div>
+                        <div class="computed-quantities-grid">
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">t<sub>univ</sub></span>
+                                <span class="quantity-name">Age of the Universe</span>
+                            </div>
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">t<sub>lb</sub></span>
+                                <span class="quantity-name">Lookback Time</span>
+                            </div>
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">D<sub>C</sub></span>
+                                <span class="quantity-name">Comoving Distance</span>
+                            </div>
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">D<sub>A</sub></span>
+                                <span class="quantity-name">Angular Diameter Distance</span>
+                            </div>
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">D<sub>L</sub></span>
+                                <span class="quantity-name">Luminosity Distance</span>
+                            </div>
+                            <div class="quantity-tile">
+                                <span class="quantity-symbol">T(z)</span>
+                                <span class="quantity-name">CMB Temperature Scaling</span>
+                            </div>
                         </div>
-                        
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <a href="https://github.com/bharadwajsumukha/cosmology-calculator-android/releases" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                Download APK
+
+                        <div class="software-footer-actions">
+                            <a href="https://github.com/bharadwajsumukha/cosmology-calculator-android/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download APK (Android Releases)
                             </a>
-                            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
-                                If you encounter any issues or suggestions, please <a href="#contact" style="color: var(--primary-color);">contact me</a>.
-                            </p>
+                            <p class="software-note">Encountered an issue or have a suggestion? Feel free to <a href="#contact">get in touch</a>.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===================================================================
+             PUBLICATIONS SECTION (Academic Journal Articles)
+             =================================================================== -->
         <section id="publications" class="section">
             <div class="container">
-                <h2>Selected Publications</h2>
-                <div class="pub-card">
-                    <div class="pub-icon-wrapper">
-                        📄
-                    </div>
-                    <div class="pub-content">
-                        <div class="pub-title">Warm-hot circumgalactic gas in galaxy pair halos: Ne VIII and O VI absorption toward PKS 0405-123 and HE 0226-4110</div>
-                        <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
-                        <div class="pub-badges">
-                            <span class="pub-badge badge-warning">⏳ Under Review</span>
-                            <span class="pub-badge badge-neutral">Submitted to ApJ</span>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <div class="section-label">Academic Output</div>
+                    <h2 class="section-title">Selected Publications</h2>
+                    <p class="section-description">Peer-reviewed journal articles and submitted manuscripts in observational astrophysics and circumgalactic gas dynamics.</p>
                 </div>
-                <div class="pub-card">
-                    <div class="pub-icon-wrapper">
-                        📖
-                    </div>
-                    <div class="pub-content">
-                        <div class="pub-title">A Partial Lyman Limit Absorber Tracing Cold-Mode Accretion</div>
-                        <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
-                        <div class="pub-badges">
-                            <span class="pub-badge badge-success">✅ Published</span>
-                            <span class="pub-badge badge-neutral">ApJ 1008, 155 (2026)</span>
+
+                <div class="publications-list">
+                    <!-- Manuscript Under Review -->
+                    <article class="pub-card">
+                        <div class="pub-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
                         </div>
-                        <div style="margin-top: 10px;">
-                            <a href="https://doi.org/10.3847/1538-4357/ae853b" target="_blank" style="color: #007bff; text-decoration: none; font-weight: 500;">📖 Read the full paper here</a>
+                        <div class="pub-content">
+                            <div class="pub-badges">
+                                <span class="pub-badge badge-warning">&#9203; Under Review</span>
+                                <span class="pub-badge badge-neutral">Submitted to ApJ</span>
+                            </div>
+                            <h3 class="pub-title">Warm-hot circumgalactic gas in galaxy pair halos: Ne VIII and O VI absorption toward PKS 0405-123 and HE 0226-4110</h3>
+                            <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
+                            <div class="pub-link-row">
+                                <span style="font-size: 0.9rem; color: var(--text-muted); font-style: italic;">Manuscript submitted to The Astrophysical Journal</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <!-- Published Article -->
+                    <article class="pub-card">
+                        <div class="pub-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-badges">
+                                <span class="pub-badge badge-success">&#10003; Published</span>
+                                <span class="pub-badge badge-neutral">ApJ 1008, 155 (2026)</span>
+                            </div>
+                            <h3 class="pub-title">A Partial Lyman Limit Absorber Tracing Cold-Mode Accretion</h3>
+                            <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
+                            <div class="pub-link-row">
+                                <a href="https://doi.org/10.3847/1538-4357/ae853b" target="_blank" rel="noopener noreferrer" class="pub-link">
+                                    <span>Read paper at IOP Science (DOI: 10.3847/1538-4357/ae853b)</span> &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- ===================================================================
+             CURRICULUM VITAE SECTION (Timeline & Technical Profile)
+             =================================================================== -->
         <section id="cv" class="section bg-secondary">
             <div class="container">
-                <h2>Curriculum Vitae</h2>
+                <div class="cv-header-action">
+                    <div>
+                        <div class="section-label">Academic Profile</div>
+                        <h2 class="section-title">Curriculum Vitae</h2>
+                    </div>
+                    <a href="Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Full CV (PDF)
+                    </a>
+                </div>
 
-                <div class="cv-section">
-                    <h3>Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">2024 &ndash; Present</div>
-                            <div class="timeline-content">
-                                <h4>PhD in Astronomy and Astrophysics</h4>
-                                <p>Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram</p>
-                                <p class="cv-advisor">Advisor: Dr Anand Narayanan</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2021 &ndash; 2023</div>
-                            <div class="timeline-content">
-                                <h4>MSc Physics</h4>
-                                <p>St Joseph's College (Autonomous), Bengaluru City University</p>
-                                <p class="cv-advisor">SGPA: 8.25</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2018 &ndash; 2021</div>
-                            <div class="timeline-content">
-                                <h4>BSc Physics, Chemistry, Mathematics</h4>
-                                <p>St Joseph's College (Autonomous), Bengaluru City University</p>
-                                <p class="cv-advisor">SGPA: 8.2</p>
-                            </div>
-                        </div>
+                <!-- Education -->
+                <h3 class="cv-subheading">Education</h3>
+                <div class="cv-timeline">
+                    <div class="timeline-entry">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-date">2024 &ndash; PRESENT</div>
+                        <h4 class="timeline-degree">PhD in Astronomy and Astrophysics</h4>
+                        <div class="timeline-institution">Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram</div>
+                        <div class="timeline-detail">Advisor: Dr Anand Narayanan</div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-date">2021 &ndash; 2023</div>
+                        <h4 class="timeline-degree">MSc Physics</h4>
+                        <div class="timeline-institution">St Joseph's College (Autonomous), Bengaluru City University</div>
+                        <div class="timeline-detail">Graduated with an aggregate SGPA of 8.25</div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-date">2018 &ndash; 2021</div>
+                        <h4 class="timeline-degree">BSc Physics, Chemistry, Mathematics</h4>
+                        <div class="timeline-institution">St Joseph's College (Autonomous), Bengaluru City University</div>
+                        <div class="timeline-detail">Graduated with an aggregate SGPA of 8.2</div>
                     </div>
                 </div>
 
-                <div class="cv-section">
-                    <h3>Research Experience</h3>
-                    <div class="research-tiles">
-                        <div class="research-tile">
-                            <h4>PhD Research &ndash; Circumgalactic and Intergalactic Medium</h4>
-                            <p class="research-inst"><a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, Thiruvananthapuram</p>
-                            <p class="research-desc">Spectroscopic study of the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using quasar absorption line systems, combining <em>HST</em>&ndash;COS spectroscopy with <em>VLT</em>&ndash;MUSE observations to investigate galaxy&ndash;absorber connections and the physical and kinematic properties of gas around galaxies, including Ne VIII, O VI, and Mg II absorbers at low redshift.</p>
-                        </div>
-                        <div class="research-tile">
-                            <h4>Dissertation Research Project</h4>
-                            <p class="research-inst"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></p>
-                            <p class="research-desc"><strong>Topic:</strong> Transiting Exoplanetary Atmospheres &ndash; Spectroscopic Reduction and Observational Techniques<br>
-                            Performed end-to-end spectroscopic reduction of ground-based observations of two hot Jupiter exoplanets (HAT-P1-b and WASP-33b) using IRAF, including bias subtraction, flat-field correction, aperture extraction, and wavelength calibration, followed by transit light curve fitting and MCMC parameter estimation using pylightcurve.</p>
-                        </div>
-                        <div class="research-tile">
-                            <h4>Project Assistant &ndash; COSMOS Outreach Program</h4>
-                            <p class="research-inst"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></p>
-                            <p class="research-desc">Worked as a Project Assistant in the COSMOS outreach program for about six months, participating in astronomy outreach activities and educational programs.</p>
-                        </div>
+                <!-- Research Experience -->
+                <h3 class="cv-subheading">Research Experience</h3>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h4 class="experience-title">PhD Research &ndash; Circumgalactic and Intergalactic Medium</h4>
+                        <div class="experience-institution"><a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, Thiruvananthapuram</div>
+                        <p class="experience-description">Spectroscopic study of the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using quasar absorption line systems, combining <em>HST</em>&ndash;COS spectroscopy with <em>VLT</em>&ndash;MUSE observations to investigate galaxy&ndash;absorber connections and the physical and kinematic properties of gas around galaxies, including Ne VIII, O VI, and Mg II absorbers at low redshift.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4 class="experience-title">Master's Dissertation Research Project</h4>
+                        <div class="experience-institution"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></div>
+                        <p class="experience-description"><strong>Topic:</strong> Transiting Exoplanetary Atmospheres &ndash; Spectroscopic Reduction and Observational Techniques<br>
+                        Performed end-to-end spectroscopic reduction of ground-based observations of two hot Jupiter exoplanets (HAT-P1-b and WASP-33b) using IRAF, including bias subtraction, flat-field correction, aperture extraction, and wavelength calibration, followed by transit light curve fitting and MCMC parameter estimation using pylightcurve.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4 class="experience-title">Project Assistant &ndash; COSMOS Outreach Program</h4>
+                        <div class="experience-institution"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></div>
+                        <p class="experience-description">Worked as a Project Assistant in the COSMOS outreach program for about six months, participating in astronomy outreach activities and educational programs.</p>
                     </div>
                 </div>
 
-                <div class="cv-section">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-tile">
-                            <div class="skill-name">Python</div>
-                            <div class="skill-desc">Scientific computing, spectral analysis, and data reduction</div>
-                        </div>
-                        <div class="skill-tile">
-                            <div class="skill-name">Specialised Tools</div>
-                            <div class="skill-desc">GalPaK3D, Prospector, BAGPIPES, Cloudy, emcee</div>
-                        </div>
-                        <div class="skill-tile">
-                            <div class="skill-name">IRAF / PyRAF</div>
-                            <div class="skill-desc">Spectral reduction and analysis</div>
-                        </div>
-                        <div class="skill-tile">
-                            <div class="skill-name">LaTeX</div>
-                            <div class="skill-desc">Scientific document preparation</div>
-                        </div>
-                        <div class="skill-tile">
-                            <div class="skill-name">Maxima</div>
-                            <div class="skill-desc">Mathematical computation</div>
-                        </div>
+                <!-- Technical Skills Categorized -->
+                <h3 class="cv-subheading">Technical &amp; Computational Skills</h3>
+                <div class="skills-category-grid">
+                    <div class="skill-category-card">
+                        <div class="skill-cat-name">Programming</div>
+                        <div class="skill-cat-title">Python</div>
+                        <div class="skill-cat-items">Scientific computing, spectral analysis, data reduction, and Markov chain Monte Carlo modeling</div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-cat-name">Astrophysics Tools</div>
+                        <div class="skill-cat-title">Specialised Software</div>
+                        <div class="skill-cat-items">GalPaK3D, Prospector, BAGPIPES, Cloudy photoionization modeling, emcee</div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-cat-name">Spectroscopy</div>
+                        <div class="skill-cat-title">IRAF / PyRAF</div>
+                        <div class="skill-cat-items">Astronomical spectral reduction, aperture extraction, and wavelength calibration</div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-cat-name">Scientific Typesetting</div>
+                        <div class="skill-cat-title">LaTeX</div>
+                        <div class="skill-cat-items">Scientific manuscript and technical document preparation</div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-cat-name">Mathematics</div>
+                        <div class="skill-cat-title">Maxima</div>
+                        <div class="skill-cat-items">Symbolic algebra and mathematical computation</div>
                     </div>
                 </div>
-
-                <a href="Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV
-                    (PDF)</a>
             </div>
         </section>
 
+        <!-- ===================================================================
+             OUTREACH & TEACHING SECTION
+             =================================================================== -->
         <section id="outreach" class="section">
             <div class="container">
-                <h2>Outreach & Teaching</h2>
+                <div class="section-header">
+                    <div class="section-label">Engagement &amp; Pedagogy</div>
+                    <h2 class="section-title">Outreach &amp; Teaching</h2>
+                    <p class="section-description">Dedicated to introducing public audiences to observational astronomy and mentoring students in departmental instrumentation.</p>
+                </div>
+
                 <div class="outreach-grid">
                     <div class="outreach-card">
-                        <h3>Astronomy Outreach and Night Sky Sessions</h3>
-                        <p>I participate in astronomy outreach activities where I conduct night sky observation sessions
-                            for students and the public using outreach telescopes. These sessions introduce participants
-                            to observational astronomy and basic techniques for observing celestial objects such as the
-                            Moon, planets, and bright nebulae.</p>
+                        <div class="outreach-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="m4.93 4.93 4.24 4.24"></path>
+                                <path d="m14.83 9.17 4.24-4.24"></path>
+                                <path d="m14.83 14.83 4.24 4.24"></path>
+                                <path d="m9.17 14.83-4.24 4.24"></path>
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="outreach-title">Astronomy Outreach and Night Sky Sessions</h3>
+                        <p class="outreach-desc">I participate in astronomy outreach activities where I conduct night sky observation sessions for students and the public using outreach telescopes. These sessions introduce participants to observational astronomy and basic techniques for observing celestial objects such as the Moon, planets, and bright nebulae.</p>
                     </div>
+
                     <div class="outreach-card">
-                        <h3>Teaching Assistant &ndash; Observational Astronomy</h3>
-                        <p>Assist MSc students in learning observational astronomy techniques, including acquiring
-                            astronomical images using the departmental telescope and understanding basic observational
-                            procedures.</p>
+                        <div class="outreach-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="outreach-title">Teaching Assistant &ndash; Observational Astronomy</h3>
+                        <p class="outreach-desc">Assist MSc students in learning observational astronomy techniques, including acquiring astronomical images using the departmental telescope and understanding basic observational procedures.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===================================================================
+             PERSONAL INTERESTS SECTION (Beyond the Observatory)
+             =================================================================== -->
         <section id="personal" class="section bg-secondary">
             <div class="container">
-                <h2>Personal Interests</h2>
-                <p>Outside my academic research, I have a strong passion for acting and music. I have acted in Kannada
-                    films and television serials in addition to my work in astronomy. Some of my acting work includes
-                    the following productions.</p>
-                <div class="interests-grid" style="margin-top: 1.5rem;">
-                    <a href="https://youtu.be/d0qP-eOghX8?si=YRT0gtvgRGENAf5N" target="_blank" rel="noopener noreferrer" class="interest-tile clickable-card">
-                        <div class="interest-emoji">🎬</div>
-                        <div class="interest-info">
-                            <div class="interest-title">Shubhamangala</div>
-                            <div class="interest-desc">Acted in this film</div>
+                <div class="section-header">
+                    <div class="section-label">Beyond Research</div>
+                    <h2 class="section-title">Personal Interests</h2>
+                    <p class="section-description">Outside academic research, I have a strong passion for acting in cinema and television productions, as well as Hindustani Classical Music.</p>
+                </div>
+
+                <div class="productions-grid">
+                    <a href="https://youtu.be/d0qP-eOghX8?si=YRT0gtvgRGENAf5N" target="_blank" rel="noopener noreferrer" class="production-card">
+                        <div class="production-icon">&#127916;</div>
+                        <div class="production-info">
+                            <div class="production-title">
+                                <span>Shubhamangala</span>
+                                <span class="production-link-arrow">&nearr;</span>
+                            </div>
+                            <div class="production-desc">Feature Film &bull; Acted in this film</div>
                         </div>
                     </a>
-                    <a href="https://youtu.be/CH9WnIuNPps?si=pNXSjPxv_q8OIVsM" target="_blank" rel="noopener noreferrer" class="interest-tile clickable-card">
-                        <div class="interest-emoji">🎬</div>
-                        <div class="interest-info">
-                            <div class="interest-title">Kurmavatara</div>
-                            <div class="interest-desc">This film won the National Award</div>
+
+                    <a href="https://youtu.be/CH9WnIuNPps?si=pNXSjPxv_q8OIVsM" target="_blank" rel="noopener noreferrer" class="production-card">
+                        <div class="production-icon">&#127916;</div>
+                        <div class="production-info">
+                            <div class="production-title">
+                                <span>Kurmavatara</span>
+                                <span class="production-link-arrow">&nearr;</span>
+                            </div>
+                            <div class="production-desc">Feature Film &bull; National Award-Winning Film</div>
                         </div>
                     </a>
-                    <a href="https://www.hotstar.com/in/movies/alamelamma/1971004866?search_query=operation+alamelamma" target="_blank" rel="noopener noreferrer" class="interest-tile clickable-card">
-                        <div class="interest-emoji">🎬</div>
-                        <div class="interest-info">
-                            <div class="interest-title">Operation Alamelamma</div>
-                            <div class="interest-desc">Acted in this film</div>
+
+                    <a href="https://www.hotstar.com/in/movies/alamelamma/1971004866?search_query=operation+alamelamma" target="_blank" rel="noopener noreferrer" class="production-card">
+                        <div class="production-icon">&#127916;</div>
+                        <div class="production-info">
+                            <div class="production-title">
+                                <span>Operation Alamelamma</span>
+                                <span class="production-link-arrow">&nearr;</span>
+                            </div>
+                            <div class="production-desc">Feature Film &bull; Acted in this film</div>
                         </div>
                     </a>
-                    <a href="https://www.hotstar.com/in/shows/guru-raghavendra-vaibhava/1271275968?search_query=raghavendra+vaibhava" target="_blank" rel="noopener noreferrer" class="interest-tile clickable-card">
-                        <div class="interest-emoji">📺</div>
-                        <div class="interest-info">
-                            <div class="interest-title">Guru Raghavendra Vaibhava</div>
-                            <div class="interest-desc">TV Serial &ndash; Appears in episodes 491, 492, 493+</div>
+
+                    <a href="https://www.hotstar.com/in/shows/guru-raghavendra-vaibhava/1271275968?search_query=raghavendra+vaibhava" target="_blank" rel="noopener noreferrer" class="production-card">
+                        <div class="production-icon">&#128250;</div>
+                        <div class="production-info">
+                            <div class="production-title">
+                                <span>Guru Raghavendra Vaibhava</span>
+                                <span class="production-link-arrow">&nearr;</span>
+                            </div>
+                            <div class="production-desc">Television Serial &bull; Episodes 491, 492, 493+</div>
                         </div>
                     </a>
                 </div>
-                <div class="interest-tile flex-stretch" style="margin-top: 1.5rem;">
-                    <div class="interest-emoji">🎵</div>
-                    <div class="interest-info">
-                        <div class="interest-title">Hindustani Classical Music</div>
-                        <div class="interest-desc">Passion for classical singing and performing arts.</div>
+
+                <div class="music-feature-card">
+                    <div class="music-icon">&#127925;</div>
+                    <div class="music-info">
+                        <h4 class="music-title">Hindustani Classical Music</h4>
+                        <p class="music-desc">Completed 'Praveshika Poorna' in Hindustani Classical singing with a continuing passion for classical vocal performance and musical theory.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===================================================================
+             CONTACT SECTION (Academic & Research Engagement)
+             =================================================================== -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 style="text-align: center;">Contact</h2>
+                <div class="section-header" style="text-align: center;">
+                    <div class="section-label" style="justify-content: center;">Get In Touch</div>
+                    <h2 class="section-title">Contact &amp; Collaboration</h2>
+                    <p class="section-description" style="margin: 0 auto;">Interested in research collaboration, academic discussions, or outreach opportunities? Feel free to reach out.</p>
+                </div>
+
                 <div class="contact-info-grid">
                     <div class="contact-cards-column">
-                        <a href="mailto:bharadwaj.sumukha@gmail.com" class="contact-detail-card clickable-card">
-                            <div class="contact-icon-wrapper blue-tint">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:bharadwaj.sumukha@gmail.com" class="contact-detail-card">
+                            <div class="contact-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
                             </div>
                             <div class="contact-text">
                                 <div class="contact-label">Primary Email</div>
-                                <div class="contact-value">bharadwaj.sumukha&#64;gmail.com</div>
+                                <div class="contact-value">bharadwaj.sumukha@gmail.com</div>
                             </div>
                         </a>
-                        <a href="mailto:sumukharb.24@res.iist.ac.in" class="contact-detail-card clickable-card">
-                            <div class="contact-icon-wrapper blue-tint">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+
+                        <a href="mailto:sumukharb.24@res.iist.ac.in" class="contact-detail-card">
+                            <div class="contact-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
                             </div>
                             <div class="contact-text">
                                 <div class="contact-label">Institutional Email</div>
-                                <div class="contact-value">sumukharb.24&#64;res.iist.ac.in</div>
+                                <div class="contact-value">sumukharb.24@res.iist.ac.in</div>
                             </div>
                         </a>
+
                         <div class="contact-detail-card">
-                            <div class="contact-icon-wrapper green-tint">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+                            <div class="contact-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                    <path d="M9 22v-4h6v4"></path>
+                                    <path d="M8 6h.01"></path>
+                                    <path d="M16 6h.01"></path>
+                                    <path d="M12 6h.01"></path>
+                                    <path d="M12 10h.01"></path>
+                                    <path d="M12 14h.01"></path>
+                                    <path d="M16 10h.01"></path>
+                                    <path d="M16 14h.01"></path>
+                                    <path d="M8 10h.01"></path>
+                                    <path d="M8 14h.01"></path>
+                                </svg>
                             </div>
                             <div class="contact-text">
                                 <div class="contact-label">Institution</div>
-                                <div class="contact-value">Indian Institute of Space Science and Technology (IIST)<br>Thiruvananthapuram, Kerala, India</div>
+                                <div class="contact-value">Indian Institute of Space Science and Technology (IIST)<br><span style="font-weight: 400; font-size: 0.9rem; color: var(--text-muted);">Thiruvananthapuram, Kerala, India</span></div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Social Profiles Column -->
                     <div class="contact-social-column">
-                        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; height: 100%; align-content: center;">
-                            <a href="https://www.instagram.com/bharadwaj.sumukha/" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="assets/icons/Instagram.svg" alt="Instagram" class="social-icon">
+                        <div class="social-column-title">Academic &amp; Social Profiles</div>
+                        <div class="social-links-grid">
+                            <a href="https://github.com/bharadwajsumukha/" target="_blank" rel="noopener noreferrer" class="social-button">
+                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                </svg>
+                                <span>GitHub</span>
                             </a>
-                            <a href="https://in.linkedin.com/in/sumukha-bharadwaj-520a81232" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="assets/icons/LinkedIn.png" alt="LinkedIn" class="social-icon">
+
+                            <a href="https://in.linkedin.com/in/sumukha-bharadwaj-520a81232" target="_blank" rel="noopener noreferrer" class="social-button">
+                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                </svg>
+                                <span>LinkedIn</span>
                             </a>
-                            <a href="https://x.com/sumukharbhar15" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/icons/X.svg" alt="X" class="social-icon">
+
+                            <a href="https://x.com/sumukharbhar15" target="_blank" rel="noopener noreferrer" class="social-button">
+                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                <span>X (Twitter)</span>
                             </a>
-                            <a href="https://github.com/bharadwajsumukha/" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/icons/GitHub.svg" alt="GitHub" class="social-icon">
+
+                            <a href="https://www.instagram.com/bharadwaj.sumukha/" target="_blank" rel="noopener noreferrer" class="social-button">
+                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <span>Instagram</span>
                             </a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             GALLERY SECTION (Telescope & Outreach Horizontal Track)
+             =================================================================== -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-label" style="justify-content: center;">Observational Astronomy</div>
+                <h2 class="section-title">🔭 Telescope &amp; Outreach Sessions</h2>
+                <p class="section-description">A photographic record of night sky observation sessions and astronomy outreach programs.</p>
+            </div>
+
+            <div class="gallery-wrapper">
+                <button id="gallery-prev" class="gallery-nav prev" aria-label="Previous images">&lsaquo;</button>
+                <div class="gallery-container">
+                    <div class="gallery-track" id="gallery-track">
+                        <!-- Dynamic images injected here via script.js -->
+                    </div>
+                </div>
+                <button id="gallery-next" class="gallery-nav next" aria-label="Next images">&rsaquo;</button>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Sumukha R Bharadwaj. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <h2>🔭 Telescope & Outreach Sessions</h2>
-        </div>
-        <div class="gallery-wrapper">
-            <button id="gallery-prev" class="gallery-nav prev" aria-label="Previous images">&lsaquo;</button>
-            <div class="gallery-container">
-                <div class="gallery-track" id="gallery-track">
-                    <!-- Images will be injected here via JavaScript -->
-                </div>
-            </div>
-            <button id="gallery-next" class="gallery-nav next" aria-label="Next images">&rsaquo;</button>
-        </div>
-    </section>
-
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
+    <!-- Fullscreen Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image view">
+        <span class="lightbox-close" title="Close (Esc)">&times;</span>
         <button id="lightbox-prev" class="lightbox-nav prev" aria-label="Previous image">&lsaquo;</button>
-        <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery view">
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged telescope gallery observation view">
         <button id="lightbox-next" class="lightbox-nav next" aria-label="Next image">&rsaquo;</button>
     </div>
+
+    <!-- Minimal Elegant Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year"></span> Sumukha R Bharadwaj &bull; All rights reserved.</p>
+            <p class="footer-academic-note">Astrophysics Research Scholar &bull; Department of Earth &amp; Space Sciences &bull; IIST Thiruvananthapuram</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

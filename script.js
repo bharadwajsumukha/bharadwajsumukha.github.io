@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggling
+    // -------------------------------------------------------------------------
+    // 1. Theme Toggling (Dark Mode by Default)
+    // -------------------------------------------------------------------------
     const themeToggle = document.getElementById('theme-toggle');
     const moonIcon = document.getElementById('moon-icon');
     const sunIcon = document.getElementById('sun-icon');
     const html = document.documentElement;
-    
-    // Check local storage for saved theme preference or system preference
+
+    // Check local storage for saved theme preference
     const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Set initial theme (Dark Mode by Default)
+
     if (savedTheme === 'light') {
         html.setAttribute('data-theme', 'light');
         updateThemeIcons('light');
@@ -18,18 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeIcons('dark');
     }
 
-    // Toggle click event
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcons(newTheme);
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-    // Helper to update SVG icons
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+    }
+
     function updateThemeIcons(theme) {
+        if (!moonIcon || !sunIcon) return;
         if (theme === 'dark') {
             moonIcon.style.display = 'none';
             sunIcon.style.display = 'block';
@@ -39,46 +40,108 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    // -------------------------------------------------------------------------
+    // 2. Navigation: Header Scroll Elevation & Active Link Highlighting
+    // -------------------------------------------------------------------------
+    const header = document.getElementById('site-header') || document.querySelector('header');
     const navLinks = document.querySelector('.nav-links');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navAnchors = document.querySelectorAll('.nav-links a');
 
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    // Header elevation shadow on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, { passive: true });
+
+    // Mobile Menu Toggle
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active', isOpen);
+            mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close mobile menu on clicking anywhere outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== mobileMenuToggle) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
         });
     }
 
-    // Close mobile menu on clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    // Close mobile menu on clicking a nav link
+    navAnchors.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && navLinks) {
                 navLinks.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
             }
         });
     });
 
-    // Set dynamic current year in the footer
+    // Active Link Highlighting via IntersectionObserver
+    const observedSections = document.querySelectorAll('section[id]');
+    if (observedSections.length > 0) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navAnchors.forEach(anchor => {
+                        const href = anchor.getAttribute('href');
+                        if (href === `#${currentId}`) {
+                            anchor.classList.add('active');
+                        } else {
+                            anchor.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.25,
+            rootMargin: "-80px 0px -50% 0px"
+        });
+
+        observedSections.forEach(sec => sectionObserver.observe(sec));
+    }
+
+    // Dynamic current year in footer
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-    
-    // Smooth Scrolling for anchor links
+
+    // Smooth Scrolling for anchor links with header offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
+            if (targetId === '#' || targetId === '') return;
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Adjust for fixed header height
-                const headerHeight = document.querySelector('header').offsetHeight;
+                e.preventDefault();
+                const headerHeight = header ? header.offsetHeight : 70;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.scrollY - headerHeight;
-                
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
@@ -87,7 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gallery Array injection for Telescope & Outreach Sessions
+    // -------------------------------------------------------------------------
+    // 3. Telescope Gallery Track & Infinite Scroll
+    // -------------------------------------------------------------------------
     const galleryTrack = document.getElementById('gallery-track');
     if (galleryTrack) {
         const galleryImages = [
@@ -103,62 +168,64 @@ document.addEventListener('DOMContentLoaded', () => {
             "IMG_20250127_184551960.jpg", "IMG_20250127_202432427.jpg", "IMG_20250208_184507237.jpg",
             "IMG_20250209_192124657.jpg", "IMG_20250222_223424915.jpg", "IMG_20250222_223430472.jpg"
         ];
-        
+
         // Duplicate the array to allow for a seamless infinite scroll loop
         const scrollingImages = [...galleryImages, ...galleryImages];
-        
+
         scrollingImages.forEach(filename => {
             const img = document.createElement('img');
             img.src = `assets/images/${filename}`;
-            img.alt = "Telescope Outreach Session";
+            img.alt = "Telescope Outreach and Night Sky Session";
             img.className = 'gallery-img';
             img.loading = 'lazy';
-            
+
             // Add click listener to open lightbox
             img.addEventListener('click', () => {
                 openLightbox(img);
             });
-            
+
             galleryTrack.appendChild(img);
         });
 
         // Gallery Auto-Scroll & Navigation Logic
         let galleryPosX = 0;
         let isHoveringGallery = false;
-        let autoScrollSpeed = 0.375; // Slower speed (0.5 * 0.75)
+        let autoScrollSpeed = 0.35;
         let currentVelocity = 0;
         let loopPoint = 0;
 
         const galleryContainer = document.querySelector('.gallery-container');
-        galleryContainer.addEventListener('mouseenter', () => isHoveringGallery = true);
-        galleryContainer.addEventListener('mouseleave', () => isHoveringGallery = false);
-        
-        galleryContainer.addEventListener('wheel', (e) => {
-            if (!window.isLightboxOpen) {
-                e.preventDefault();
-                currentVelocity += (e.deltaY + e.deltaX) * 0.05;
-            }
-        }, { passive: false });
+        if (galleryContainer) {
+            galleryContainer.addEventListener('mouseenter', () => isHoveringGallery = true);
+            galleryContainer.addEventListener('mouseleave', () => isHoveringGallery = false);
+
+            galleryContainer.addEventListener('wheel', (e) => {
+                if (!window.isLightboxOpen) {
+                    e.preventDefault();
+                    currentVelocity += (e.deltaY + e.deltaX) * 0.05;
+                }
+            }, { passive: false });
+        }
 
         const prevBtn = document.getElementById('gallery-prev');
         const nextBtn = document.getElementById('gallery-next');
-        if (prevBtn) prevBtn.addEventListener('click', () => currentVelocity -= 15);
-        if (nextBtn) nextBtn.addEventListener('click', () => currentVelocity += 15);
+        if (prevBtn) prevBtn.addEventListener('click', () => currentVelocity -= 18);
+        if (nextBtn) nextBtn.addEventListener('click', () => currentVelocity += 18);
 
         function animateGallery() {
             if (!window.isLightboxOpen && galleryTrack.children.length > 0) {
                 let baseSpeed = isHoveringGallery ? 0 : autoScrollSpeed;
                 let totalSpeed = baseSpeed + currentVelocity;
-                
+
                 currentVelocity *= 0.9;
                 if (Math.abs(currentVelocity) < 0.01) currentVelocity = 0;
-                
+
                 galleryPosX -= totalSpeed;
-                
+
                 if (galleryTrack.children.length >= galleryImages.length * 2) {
                     loopPoint = galleryTrack.children[galleryImages.length].offsetLeft;
                 }
-                
+
                 if (loopPoint > 0) {
                     if (galleryPosX <= -loopPoint) {
                         galleryPosX += loopPoint;
@@ -166,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         galleryPosX -= loopPoint;
                     }
                 }
-                
+
                 galleryTrack.style.transform = `translate3d(${galleryPosX}px, 0, 0)`;
             }
             requestAnimationFrame(animateGallery);
@@ -174,11 +241,13 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateGallery);
     }
 
-    // Lightbox Functionality
+    // -------------------------------------------------------------------------
+    // 4. Lightbox Functionality (Zoom, Pan, Keyboard Navigation)
+    // -------------------------------------------------------------------------
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.querySelector('.lightbox-close');
-    
+
     let currentZoom = 1;
     let panX = 0;
     let panY = 0;
@@ -187,8 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeIndex = -1;
     let isTransitioning = false;
 
-    // Build array of gallery thumbnails for navigation
-    const galleryThumbnails = Array.from(galleryTrack.children);
+    const galleryThumbnails = galleryTrack ? Array.from(galleryTrack.children) : [];
 
     let isDragging = false;
     let startX = 0;
@@ -197,74 +265,70 @@ document.addEventListener('DOMContentLoaded', () => {
     let startPanY = 0;
 
     function openLightbox(thumbnailImg) {
-        if (!lightbox) return;
+        if (!lightbox || !lightboxImg) return;
         activeThumbnail = thumbnailImg;
         activeIndex = galleryThumbnails.indexOf(thumbnailImg);
-        
+
         const thumbRect = thumbnailImg.getBoundingClientRect();
         lightboxImg.src = thumbnailImg.src;
-        
+
         lightbox.style.visibility = 'visible';
         lightbox.style.display = 'flex';
         lightbox.classList.remove('active');
-        
+
         lightboxImg.style.transition = 'none';
         lightboxImg.style.transform = 'translate3d(0px, 0px, 0px) scale(1)';
         lightboxImg.style.transformOrigin = 'center center';
-        
+
         const targetRect = lightboxImg.getBoundingClientRect();
-        
         const scale = thumbRect.height / (targetRect.height || 1);
-        const translateX = thumbRect.left + thumbRect.width/2 - (targetRect.left + targetRect.width/2);
-        const translateY = thumbRect.top + thumbRect.height/2 - (targetRect.top + targetRect.height/2);
-        
+        const translateX = thumbRect.left + thumbRect.width / 2 - (targetRect.left + targetRect.width / 2);
+        const translateY = thumbRect.top + thumbRect.height / 2 - (targetRect.top + targetRect.height / 2);
+
         lightboxImg.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
-        
         void lightboxImg.offsetWidth; // Force reflow
-        
+
         lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
         lightbox.classList.add('active');
-        
+
         window.isLightboxOpen = true;
         currentZoom = 1;
         panX = 0;
         panY = 0;
-        
+
         lightboxImg.style.transform = `translate3d(0px, 0px, 0px) scale(1)`;
         document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
         if (!lightbox || !window.isLightboxOpen) return;
-        
-        if (activeThumbnail) {
+
+        if (activeThumbnail && lightboxImg) {
             const thumbRect = activeThumbnail.getBoundingClientRect();
-            
-            const prevTx = lightboxImg.style.transition;
             const prevTf = lightboxImg.style.transform;
-            
+
             lightboxImg.style.transition = 'none';
             lightboxImg.style.transform = 'translate3d(0px, 0px, 0px) scale(1)';
             lightboxImg.style.transformOrigin = 'center center';
             const baseRect = lightboxImg.getBoundingClientRect();
-            
+
             lightboxImg.style.transform = prevTf;
             void lightboxImg.offsetWidth;
             lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-            
+
             const scale = thumbRect.height / (baseRect.height || 1);
-            const translateX = thumbRect.left + thumbRect.width/2 - (baseRect.left + baseRect.width/2);
-            const translateY = thumbRect.top + thumbRect.height/2 - (baseRect.top + baseRect.height/2);
-            
+            const translateX = thumbRect.left + thumbRect.width / 2 - (baseRect.left + baseRect.width / 2);
+            const translateY = thumbRect.top + thumbRect.height / 2 - (baseRect.top + baseRect.height / 2);
+
             lightboxImg.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
         }
-        
+
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
         window.isLightboxOpen = false;
-        
+
         setTimeout(() => {
-            if (!window.isLightboxOpen) {
+            if (!window.isLightboxOpen && lightbox && lightboxImg) {
                 lightbox.style.visibility = 'hidden';
                 lightboxImg.style.transition = 'none';
                 lightboxImg.style.transform = 'none';
@@ -273,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function navigateLightbox(direction) {
-        if (!window.isLightboxOpen || isTransitioning || galleryThumbnails.length === 0) return;
+        if (!window.isLightboxOpen || isTransitioning || galleryThumbnails.length === 0 || !lightboxImg) return;
         isTransitioning = true;
 
         if (direction === 'next') {
@@ -285,45 +349,43 @@ document.addEventListener('DOMContentLoaded', () => {
         activeThumbnail = galleryThumbnails[activeIndex];
         const newSrc = activeThumbnail.src;
 
-        // Reset zoom and panning immediately
         currentZoom = 1;
         panX = 0;
         panY = 0;
         lightboxImg.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-        lightboxImg.style.opacity = '0'; // Start fade out
+        lightboxImg.style.opacity = '0';
 
         setTimeout(() => {
             lightboxImg.src = newSrc;
             lightboxImg.style.transform = `translate3d(0px, 0px, 0px) scale(1)`;
             lightboxImg.style.transformOrigin = 'center center';
-            
-            // Short delay to ensure image swaps before fading back in
+
             setTimeout(() => {
                 lightboxImg.style.opacity = '1';
                 setTimeout(() => {
                     isTransitioning = false;
                     lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-                }, 200); // Wait for fade in
+                }, 200);
             }, 50);
-        }, 200); // Wait for fade out
+        }, 200);
     }
 
     if (lightbox) {
         const lbPrevBtn = document.getElementById('lightbox-prev');
         const lbNextBtn = document.getElementById('lightbox-next');
-        
+
         if (lbPrevBtn) lbPrevBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox('prev'); });
         if (lbNextBtn) lbNextBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox('next'); });
 
-        lightboxClose.addEventListener('click', closeLightbox);
-        
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
 
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
-            
+
             if (e.key === 'Escape') {
                 closeLightbox();
             } else if (e.key === 'ArrowRight') {
@@ -334,60 +396,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Panning logic
-        lightboxImg.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.clientX;
-            startY = e.clientY;
-            startPanX = panX;
-            startPanY = panY;
-            
-            lightboxImg.style.transition = 'none';
-            lightboxImg.style.cursor = 'grabbing';
-            e.preventDefault();
-        });
+        if (lightboxImg) {
+            lightboxImg.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startPanX = panX;
+                startPanY = panY;
 
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-            panX = startPanX + dx;
-            panY = startPanY + dy;
-            lightboxImg.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
-        });
+                lightboxImg.style.transition = 'none';
+                lightboxImg.style.cursor = 'grabbing';
+                e.preventDefault();
+            });
 
-        window.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                lightboxImg.style.cursor = '';
-                
-                // Only snap back to center if not zoomed in
-                if (currentZoom === 1) {
-                    panX = 0;
-                    panY = 0;
-                    lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-                    lightboxImg.style.transform = `translate3d(0px, 0px, 0px) scale(${currentZoom})`;
-                } else {
-                    // Keep the current pan position
-                    lightboxImg.style.transition = 'transform 0.1s ease-out';
-                    lightboxImg.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                panX = startPanX + dx;
+                panY = startPanY + dy;
+                lightboxImg.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
+            });
+
+            window.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    lightboxImg.style.cursor = '';
+
+                    if (currentZoom === 1) {
+                        panX = 0;
+                        panY = 0;
+                        lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+                        lightboxImg.style.transform = `translate3d(0px, 0px, 0px) scale(${currentZoom})`;
+                    } else {
+                        lightboxImg.style.transition = 'transform 0.1s ease-out';
+                        lightboxImg.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
+                    }
                 }
-            }
-        });
+            });
 
-        lightboxImg.addEventListener('dragstart', (e) => e.preventDefault());
+            lightboxImg.addEventListener('dragstart', (e) => e.preventDefault());
+        }
 
         // Zoom functionality on scroll
         lightbox.addEventListener('wheel', (e) => {
             e.preventDefault();
 
+            if (!lightboxImg) return;
+
             if (currentZoom === 1 && e.deltaY < 0) {
                 const rect = lightboxImg.getBoundingClientRect();
                 const x = ((e.clientX - rect.left) / rect.width) * 100;
                 const y = ((e.clientY - rect.top) / rect.height) * 100;
-                
+
                 const clampX = Math.max(0, Math.min(100, x));
                 const clampY = Math.max(0, Math.min(100, y));
-                
+
                 lightboxImg.style.transformOrigin = `${clampX}% ${clampY}%`;
             }
 
@@ -398,8 +462,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentZoom -= 0.25;
                 if (currentZoom <= 1) {
                     currentZoom = 1;
-                    
-                    // Smoothly recenter when we zoom out back to 1x
                     panX = 0;
                     panY = 0;
                     lightboxImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
@@ -409,18 +471,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (currentZoom === 1 && !isDragging) {
                             lightboxImg.style.transformOrigin = 'center center';
                         }
-                    }, 400); 
+                    }, 400);
                 }
             }
 
-            // Only apply transform immediately if zoom is > 1x since recenter triggers its own transition
             if (currentZoom > 1) {
                 lightboxImg.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
             }
         }, { passive: false });
     }
 
-    // Intersection Observer for scroll fade-in
+    // -------------------------------------------------------------------------
+    // 5. Scroll Fade-in Intersection Observer
+    // -------------------------------------------------------------------------
     const fadeSections = document.querySelectorAll('.section:not(#home)');
     fadeSections.forEach(section => {
         section.classList.add('section-fade');
@@ -434,8 +497,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.08,
+        rootMargin: "0px 0px -40px 0px"
     });
 
     fadeSections.forEach(section => {
