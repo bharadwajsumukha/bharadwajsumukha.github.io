@@ -415,15 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        if (tngRateBtn) {
-            const rates = [1.0, 0.5, 1.5];
-            let rIdx = 0;
-            tngRateBtn.addEventListener('click', () => {
-                rIdx = (rIdx + 1) % rates.length;
-                tngVideo.playbackRate = rates[rIdx];
-                tngRateBtn.textContent = `Speed: ${rates[rIdx].toFixed(1)}x`;
-            });
-        }
+        // Note: Speed is handled by the universal video speed dropdown controller below
         if (tngRestartBtn) {
             tngRestartBtn.addEventListener('click', () => {
                 tngVideo.currentTime = 0;
@@ -531,6 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const vid = slide.querySelector('video');
                 if (vid) {
                     if (isActive) {
+                        if (window.eagleCurrentSpeed) {
+                            vid.playbackRate = window.eagleCurrentSpeed;
+                        }
                         vid.play().catch(() => {});
                     } else {
                         vid.pause();
@@ -574,6 +569,79 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // -------------------------------------------------------------------------
+    // 4c. UNIVERSAL VIDEO SPEED DROPDOWNS (0.5X, 0.75X, 1X, 1.25X, 1.5X, 1.75X, 2X)
+    // -------------------------------------------------------------------------
+    const speedDropdowns = document.querySelectorAll('.video-speed-dropdown');
+
+    function closeAllSpeedDropdowns() {
+        speedDropdowns.forEach(dd => {
+            dd.classList.remove('open');
+            const btn = dd.querySelector('.speed-dropdown-btn');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.video-speed-dropdown')) {
+            closeAllSpeedDropdowns();
+        }
+    });
+
+    speedDropdowns.forEach(dd => {
+        const btn = dd.querySelector('.speed-dropdown-btn');
+        const items = dd.querySelectorAll('.speed-menu-item');
+        const targetKey = dd.getAttribute('data-video-target');
+
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = dd.classList.contains('open');
+                closeAllSpeedDropdowns();
+                if (!isOpen) {
+                    dd.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+
+        items.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const speed = parseFloat(item.getAttribute('data-speed'));
+                const speedText = item.textContent.trim();
+
+                // Apply speed to appropriate video(s)
+                if (targetKey === 'tng-main-video') {
+                    const vid = document.getElementById('tng-main-video');
+                    if (vid) vid.playbackRate = speed;
+                } else if (targetKey === 'tng50-gal-video') {
+                    const vid = document.getElementById('tng50-gal-video');
+                    if (vid) vid.playbackRate = speed;
+                } else if (targetKey === 'eagle-videos') {
+                    window.eagleCurrentSpeed = speed;
+                    document.querySelectorAll('.eagle-video').forEach(v => {
+                        v.playbackRate = speed;
+                    });
+                }
+
+                // Synchronize all dropdowns controlling this target
+                document.querySelectorAll(`.video-speed-dropdown[data-video-target="${targetKey}"]`).forEach(siblingDd => {
+                    const sibLabel = siblingDd.querySelector('.speed-btn-label');
+                    if (sibLabel) sibLabel.textContent = `Speed: ${speedText}`;
+                    siblingDd.querySelectorAll('.speed-menu-item').forEach(m => {
+                        const mSpeed = parseFloat(m.getAttribute('data-speed'));
+                        m.classList.toggle('active', mSpeed === speed);
+                    });
+                });
+
+                closeAllSpeedDropdowns();
+            });
+        });
+    });
 
     // -------------------------------------------------------------------------
     // 5. VIEWPORT 2 — Interactive Quasar Sightline & HST/COS Voigt Spectrometer

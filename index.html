@@ -246,7 +246,20 @@
                                     <div class="tng-video-controls-bar">
                                         <div class="tng-ctrl-group">
                                             <button type="button" class="hud-btn" id="tng-play-btn">Play / Pause</button>
-                                            <button type="button" class="hud-btn" id="tng-rate-btn">Speed: 1.0x</button>
+                                            <div class="video-speed-dropdown" data-video-target="tng-main-video">
+                                                <button type="button" class="hud-btn speed-dropdown-btn" id="tng-rate-btn" aria-haspopup="true" aria-expanded="false" title="Video speed">
+                                                    <span class="speed-btn-label">Speed: 1X</span> <span class="speed-btn-caret">&#x25BE;</span>
+                                                </button>
+                                                <div class="speed-dropdown-menu" role="menu">
+                                                    <button type="button" class="speed-menu-item" data-speed="0.5" role="menuitem">0.5X</button>
+                                                    <button type="button" class="speed-menu-item" data-speed="0.75" role="menuitem">0.75X</button>
+                                                    <button type="button" class="speed-menu-item active" data-speed="1" role="menuitem">1X</button>
+                                                    <button type="button" class="speed-menu-item" data-speed="1.25" role="menuitem">1.25X</button>
+                                                    <button type="button" class="speed-menu-item" data-speed="1.5" role="menuitem">1.5X</button>
+                                                    <button type="button" class="speed-menu-item" data-speed="1.75" role="menuitem">1.75X</button>
+                                                    <button type="button" class="speed-menu-item" data-speed="2" role="menuitem">2X</button>
+                                                </div>
+                                            </div>
                                             <button type="button" class="hud-btn" id="tng-restart-btn">Restart (z &rarr; 0)</button>
                                         </div>
                                         <span class="tng-status-note" id="tng-status-text">TNG100 Halo #194946 (M* = 2 &times; 10&sup1;&sup1; M&#9737;) &bull; <a href="https://www.tng-project.org/movies/tng/tng100_sb0_194946_zinger20.mp4" target="_blank" rel="noopener noreferrer">Direct MP4 &nearr;</a></span>
@@ -367,11 +380,25 @@
                         <div class="sim-atlas-grid">
                             <article class="sim-atlas-card">
                                 <div class="sim-atlas-img-wrap">
-                                    <video autoplay loop muted playsinline controls preload="metadata">
+                                    <video id="tng50-gal-video" autoplay loop muted playsinline controls preload="metadata">
                                         <source src="https://www.tng-project.org/movies/tng/tng50_single_galaxy_formation_g2_1080p.mp4" type="video/mp4">
                                         Your browser does not support HTML5 video.
                                     </video>
                                     <span class="sim-atlas-badge">TNG50 // GALAXY FORMATION</span>
+                                    <div class="video-speed-dropdown atlas-overlay-speed" data-video-target="tng50-gal-video">
+                                        <button type="button" class="speed-dropdown-btn hud-speed-pill" aria-haspopup="true" aria-expanded="false" title="Video playback speed">
+                                            <span class="speed-btn-label">Speed: 1X</span> <span class="speed-btn-caret">&#x25BE;</span>
+                                        </button>
+                                        <div class="speed-dropdown-menu" role="menu">
+                                            <button type="button" class="speed-menu-item" data-speed="0.5" role="menuitem">0.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="0.75" role="menuitem">0.75X</button>
+                                            <button type="button" class="speed-menu-item active" data-speed="1" role="menuitem">1X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.25" role="menuitem">1.25X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.5" role="menuitem">1.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.75" role="menuitem">1.75X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="2" role="menuitem">2X</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="sim-atlas-body">
                                     <h3 class="sim-atlas-title">Single Galaxy Formation &amp; Kinematics in TNG50</h3>
@@ -440,14 +467,46 @@
 
                                     <!-- Dynamic Badge -->
                                     <span class="sim-atlas-badge" id="eagle-badge">EAGLE // ROTATION OVERVIEW</span>
+
+                                    <!-- Top-Right Speed Dropdown -->
+                                    <div class="video-speed-dropdown atlas-overlay-speed" data-video-target="eagle-videos">
+                                        <button type="button" class="speed-dropdown-btn hud-speed-pill" aria-haspopup="true" aria-expanded="false" title="EAGLE video playback speed">
+                                            <span class="speed-btn-label">Speed: 1X</span> <span class="speed-btn-caret">&#x25BE;</span>
+                                        </button>
+                                        <div class="speed-dropdown-menu" role="menu">
+                                            <button type="button" class="speed-menu-item" data-speed="0.5" role="menuitem">0.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="0.75" role="menuitem">0.75X</button>
+                                            <button type="button" class="speed-menu-item active" data-speed="1" role="menuitem">1X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.25" role="menuitem">1.25X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.5" role="menuitem">1.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.75" role="menuitem">1.75X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="2" role="menuitem">2X</button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Component Views Toolbar -->
                                 <div class="eagle-pill-bar" role="tablist" aria-label="EAGLE Component Views">
-                                    <button type="button" class="eagle-pill active" data-slide-target="0" role="tab" aria-selected="true">Rotation</button>
-                                    <button type="button" class="eagle-pill" data-slide-target="1" role="tab" aria-selected="false">Gas</button>
-                                    <button type="button" class="eagle-pill" data-slide-target="2" role="tab" aria-selected="false">Stars</button>
-                                    <button type="button" class="eagle-pill" data-slide-target="3" role="tab" aria-selected="false">DM Halo</button>
+                                    <div class="eagle-pill-group">
+                                        <button type="button" class="eagle-pill active" data-slide-target="0" role="tab" aria-selected="true">Rotation</button>
+                                        <button type="button" class="eagle-pill" data-slide-target="1" role="tab" aria-selected="false">Gas</button>
+                                        <button type="button" class="eagle-pill" data-slide-target="2" role="tab" aria-selected="false">Stars</button>
+                                        <button type="button" class="eagle-pill" data-slide-target="3" role="tab" aria-selected="false">DM Halo</button>
+                                    </div>
+                                    <div class="video-speed-dropdown eagle-pill-speed" data-video-target="eagle-videos">
+                                        <button type="button" class="eagle-pill speed-dropdown-btn" aria-haspopup="true" aria-expanded="false" title="EAGLE video playback speed">
+                                            <span class="speed-btn-label">Speed: 1X</span> <span class="speed-btn-caret">&#x25BE;</span>
+                                        </button>
+                                        <div class="speed-dropdown-menu" role="menu">
+                                            <button type="button" class="speed-menu-item" data-speed="0.5" role="menuitem">0.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="0.75" role="menuitem">0.75X</button>
+                                            <button type="button" class="speed-menu-item active" data-speed="1" role="menuitem">1X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.25" role="menuitem">1.25X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.5" role="menuitem">1.5X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="1.75" role="menuitem">1.75X</button>
+                                            <button type="button" class="speed-menu-item" data-speed="2" role="menuitem">2X</button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="sim-atlas-body">
