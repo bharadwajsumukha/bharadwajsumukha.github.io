@@ -1,6 +1,7 @@
 # Sumukha R. Bharadwaj — Academic Research Portfolio
 
 [![Live Website](https://img.shields.io/badge/Live%20Website-bharadwajsumukha.github.io-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://bharadwajsumukha.github.io/)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://share.google/9fzIh7Q531DmazmGs)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0003--1664--3369-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-1664-3369)
 [![ApJ](https://img.shields.io/badge/ApJ-1008%2C%20155%20(2026)-orange?style=for-the-badge)](https://doi.org/10.3847/1538-4357/ae853b)
 [![arXiv](https://img.shields.io/badge/arXiv-2608.09418-B31B1B?style=for-the-badge)](https://arxiv.org/abs/2608.09418)
@@ -52,5 +53,6 @@ The portfolio is designed as an interactive astrophysics laboratory and telemetr
 ## Contact & Links
 
 - **Website**: [bharadwajsumukha.github.io](https://bharadwajsumukha.github.io/)
+- **Google Scholar**: [Sumukha R Bharadwaj](https://share.google/9fzIh7Q531DmazmGs)
 - **ORCID**: [0009-0003-1664-3369](https://orcid.org/0009-0003-1664-3369)
 - **Institution**: Department of Earth and Space Sciences, [Indian Institute of Space Science and Technology (IIST)](https://www.iist.ac.in/), Thiruvananthapuram 695547, India
