@@ -4,48 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumukha R Bharadwaj &ndash; Astrophysics Research Scholar | IIST</title>
-    <meta name="description" content="Personal academic website of Sumukha R Bharadwaj, PhD Researcher studying the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using quasar absorption line spectroscopy at IIST.">
+    <title>Sumukha R Bharadwaj — CGM &amp; IGM Astrophysics | IIST</title>
+    <meta name="description" content="Academic portfolio of Sumukha R Bharadwaj, PhD Researcher at IIST investigating the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using HST/COS quasar absorption spectroscopy, VLT/MUSE integral field kinematics, and cosmological simulations.">
     <meta name="author" content="Sumukha R Bharadwaj">
 
-    <!-- Google Fonts: Inter (UI/Body), Newsreader (Academic Serif), JetBrains Mono (Technical) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Top Sticky / Floating Header -->
+    <!-- Top Observatory Telemetry Ribbon -->
+    <div class="telemetry-ribbon">
+        <div class="container telemetry-ribbon-inner">
+            <div class="telemetry-group">
+                <span class="telemetry-item">
+                    <span class="telemetry-dot"></span>
+                    <span class="telemetry-key">OBSERVATORY //</span>
+                    <span class="telemetry-val">IIST THIRUVANANTHAPURAM (8.6265° N, 77.0340° E)</span>
+                </span>
+                <span class="telemetry-item">
+                    <span class="telemetry-key">SPECTROSCOPY //</span>
+                    <span class="telemetry-val">HST/COS (FUV) &bull; VLT/MUSE (3D IFU)</span>
+                </span>
+            </div>
+            <div class="telemetry-group">
+                <span class="telemetry-item">
+                    <span class="telemetry-key">ORCID //</span>
+                    <a href="https://orcid.org/0009-0003-1664-3369" target="_blank" rel="noopener noreferrer" class="telemetry-val">0009-0003-1664-3369</a>
+                </span>
+                <span class="telemetry-item">
+                    <span class="telemetry-key">IONS //</span>
+                    <span class="telemetry-val">H I &bull; Mg II &bull; O VI &bull; Ne VIII</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Architectural Header -->
     <header id="site-header">
-        <nav aria-label="Main Navigation">
+        <nav class="nav-bar" aria-label="Primary Navigation">
             <a href="#home" class="site-brand">
                 <span class="site-title">Sumukha R Bharadwaj</span>
-                <span class="site-subtitle">Astrophysics Scholar &bull; IIST</span>
+                <span class="site-subtitle">CGM &amp; IGM Astrophysics &bull; IIST</span>
             </a>
 
             <div class="nav-right-group">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#software">Software Tools</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#outreach">Outreach</a></li>
-                    <li><a href="#personal">Personal Interests</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home"><span class="nav-idx">00</span>Home</a></li>
+                    <li><a href="#simulations"><span class="nav-idx">01</span>Simulations &amp; CGM</a></li>
+                    <li><a href="#research"><span class="nav-idx">02</span>Research</a></li>
+                    <li><a href="#publications"><span class="nav-idx">03</span>Publications</a></li>
+                    <li><a href="#software"><span class="nav-idx">04</span>&Lambda;CDM Tool</a></li>
+                    <li><a href="#cv"><span class="nav-idx">05</span>CV</a></li>
+                    <li><a href="#outreach"><span class="nav-idx">06</span>Outreach</a></li>
+                    <li><a href="#personal"><span class="nav-idx">07</span>Beyond</a></li>
+                    <li><a href="#contact"><span class="nav-idx">08</span>Contact</a></li>
                 </ul>
 
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark/light mode" title="Switch Theme">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        style="display: none;">
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -58,8 +81,7 @@
                     </svg>
                 </button>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <button id="mobile-menu-toggle" class="icon-btn" aria-label="Toggle mobile menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -70,132 +92,326 @@
 
     <main>
         <!-- ===================================================================
-             HERO SECTION (High-End Academic Astrophysics Landing)
+             00 // HERO SECTION (Interactive Cosmic Web & Quasar Sightline)
              =================================================================== -->
         <section id="home" class="hero">
-            <div class="hero-atmosphere"></div>
-            <div class="hero-grid"></div>
+            <canvas id="hero-cosmos-canvas" aria-hidden="true"></canvas>
+            <div class="hero-grid-overlay" aria-hidden="true"></div>
 
-            <div class="container hero-content">
-                <!-- Left Column: Academic Persona & Statement -->
-                <div class="hero-text">
-                    <div class="hero-badge-pill">
-                        <span class="hero-badge-dot"></span>
-                        <span>PhD Scholar &bull; Astronomy &amp; Astrophysics</span>
+            <div class="container hero-main-grid">
+                <div class="hero-left-col">
+                    <div class="hero-eyebrow">
+                        <span>PhD Research Scholar &bull; Observational Cosmology &amp; Spectroscopy</span>
                     </div>
 
                     <h1 class="hero-name">Sumukha R Bharadwaj</h1>
-                    <div class="hero-title">Observational Astrophysics &bull; Quasar Absorption Spectroscopy</div>
+                    <div class="hero-role">Circumgalactic &amp; Intergalactic Medium &bull; Quasar Absorption Systems</div>
 
-                    <div class="hero-affiliation">
-                        <span>Department of Earth and Space Sciences</span>
-                        <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>
-                        <span class="hero-advisor">Advisor: <a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank" rel="noopener noreferrer">Dr Anand Narayanan</a></span>
-                    </div>
+                    <blockquote class="hero-epigraph">
+                        &ldquo;Tracing the invisible baryonic filaments, cold-mode inflows, and warm-hot feedback halos that govern galaxy evolution.&rdquo;
+                    </blockquote>
 
-                    <div class="hero-tagline-box">
-                        <p class="hero-tagline">&ldquo;Tracing the invisible threads that connect galaxies&rdquo;</p>
-                    </div>
+                    <p class="hero-lead">
+                        I am a PhD researcher in the Department of Earth and Space Sciences at the <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, advised by <a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank" rel="noopener noreferrer">Dr. Anand Narayanan</a>. My work probes the physical, chemical, and kinematic state of diffuse gas in the <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-astro-091916-055240" target="_blank" rel="noopener noreferrer">circumgalactic medium (CGM)</a> and intergalactic medium (IGM).
+                    </p>
+                    <p class="hero-lead">
+                        By combining ultraviolet quasar absorption spectroscopy from <em>HST</em>/COS with 3D integral field unit (IFU) galaxy kinematics from <em>VLT</em>/MUSE—interpreted alongside magnetohydrodynamical simulations such as <a href="https://www.tng-project.org/" target="_blank" rel="noopener noreferrer">IllustrisTNG</a> and <a href="https://astro.dur.ac.uk/ICC/Eagle/" target="_blank" rel="noopener noreferrer">EAGLE</a>—I investigate how pristine cosmic web accretion and energetic feedback shape galaxies across cosmic time.
+                    </p>
 
-                    <div class="hero-bio">
-                        <p>I am a PhD researcher studying the <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-astro-091916-055240" target="_blank" rel="noopener noreferrer">circumgalactic medium (CGM)</a> and intergalactic medium (IGM) using quasar absorption line spectroscopy. My research focuses on understanding galaxy evolution through processes such as gas accretion, outflows, and feedback.</p>
-                        <p>My work involves analysing quasar absorption systems using <em>HST</em>&ndash;COS spectroscopy and studying galaxy environments and kinematics using <em>VLT</em>&ndash;MUSE integral field spectroscopy to investigate galaxy&ndash;absorber connections.</p>
+                    <div class="hero-ion-strip" aria-label="Diagnostic Spectroscopic Transitions">
+                        <span class="ion-pill ion-pill--cold">H I Ly-series &amp; pLLS (10&#8308; K Inflows)</span>
+                        <span class="ion-pill ion-pill--cold">Mg II &lambda;&lambda;2796, 2803 (Cool Disc-Halo)</span>
+                        <span class="ion-pill ion-pill--warm">O VI &lambda;&lambda;1031, 1037 (10&#8309;&middot;&#8309; K Interface)</span>
+                        <span class="ion-pill ion-pill--warm">Ne VIII &lambda;&lambda;770, 780 (10&#8310; K Warm-Hot Halo)</span>
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>Contact Me</span>
-                        </a>
-                        <a href="Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                            <span>View CV (PDF)</span>
-                        </a>
-                        <a href="#research" class="btn btn-subtle">
-                            <span>Explore Research</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
+                        <a href="#simulations" class="btn btn-primary">Launch CGM Simulation &amp; Sightline Lab</a>
+                        <a href="#publications" class="btn btn-outline">Read ApJ Papers</a>
+                        <a href="https://bharadwajsumukha.github.io/Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Curriculum Vitae (PDF) &nearr;</a>
                     </div>
                 </div>
 
-                <!-- Right Column: Profile Portrait + Subtle Scientific Vector Motif -->
-                <div class="hero-visual">
-                    <div class="hero-astronomy-motif">
-                        <!-- Atmospheric Halo Glow -->
-                        <div class="hero-halo-glow"></div>
+                <!-- Right Column: VLT/MUSE IFU Aperture Card -->
+                <aside class="hero-aperture-card" aria-label="Researcher Profile and Telemetry">
+                    <div class="aperture-top-bar">
+                        <span>APERTURE // VLT-MUSE WFM + HST-COS</span>
+                        <span>z &sim; 0.1 &ndash; 1.0</span>
+                    </div>
 
-                        <!-- Mathematical Orbital Coordinates & Spectral Sightline SVG -->
-                        <svg class="hero-motif-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <!-- Outer Coordinate Ring with Degree Ticks -->
-                            <circle cx="200" cy="200" r="185" stroke="currentColor" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="3 5" />
-                            <circle cx="200" cy="200" r="165" stroke="currentColor" stroke-opacity="0.22" stroke-width="1" />
-                            
-                            <!-- Cardinal Celestial Crosshairs -->
-                            <line x1="200" y1="10" x2="200" y2="35" stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
-                            <line x1="200" y1="365" x2="200" y2="390" stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
-                            <line x1="10" y1="200" x2="35" y2="200" stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
-                            <line x1="365" y1="200" x2="390" y2="200" stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
-
-                            <!-- Diagonal Coordinate Ticks -->
-                            <line x1="69" y1="69" x2="83" y2="83" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
-                            <line x1="331" y1="69" x2="317" y2="83" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
-                            <line x1="69" y1="331" x2="83" y2="317" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
-                            <line x1="331" y1="331" x2="317" y2="317" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
-
-                            <!-- Elliptical Halo Orbits with Slow Rotation class -->
-                            <g class="hero-orbit-group">
-                                <ellipse cx="200" cy="200" rx="180" ry="92" stroke="currentColor" stroke-opacity="0.16" stroke-width="1" transform="rotate(-26 200 200)" stroke-dasharray="4 6" />
-                                <ellipse cx="200" cy="200" rx="175" ry="65" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" transform="rotate(34 200 200)" />
-                            </g>
-
-                            <!-- Background Quasar Sightline Dispersion Axis -->
-                            <line x1="12" y1="200" x2="388" y2="200" stroke="var(--sightline-color)" stroke-width="1.2" stroke-dasharray="3 4" />
-                            <circle cx="25" cy="200" r="3" fill="var(--accent-primary)" />
-                            <circle cx="375" cy="200" r="3" fill="var(--accent-primary)" />
-
-                            <!-- Absorption Doublets (Simulated Spectral Features) -->
-                            <!-- Ne VIII doublet -->
-                            <line x1="58" y1="193" x2="58" y2="207" stroke="var(--accent-primary)" stroke-width="1.5" />
-                            <line x1="68" y1="194" x2="68" y2="206" stroke="var(--accent-primary)" stroke-width="1.2" />
-
-                            <!-- O VI doublet -->
-                            <line x1="102" y1="191" x2="102" y2="209" stroke="var(--accent-primary)" stroke-width="1.5" />
-                            <line x1="112" y1="193" x2="112" y2="207" stroke="var(--accent-primary)" stroke-width="1.2" />
-
-                            <!-- Lyman Continuum / Lyman Alpha -->
-                            <line x1="288" y1="190" x2="288" y2="210" stroke="var(--accent-secondary)" stroke-width="1.8" />
-                            <line x1="298" y1="193" x2="298" y2="207" stroke="var(--accent-secondary)" stroke-width="1.2" />
-
-                            <!-- Mg II doublet -->
-                            <line x1="332" y1="192" x2="332" y2="208" stroke="var(--accent-primary)" stroke-width="1.5" />
-                            <line x1="342" y1="194" x2="342" y2="206" stroke="var(--accent-primary)" stroke-width="1.2" />
-
-                            <!-- Coordinate Markers -->
-                            <circle cx="200" cy="15" r="2" fill="currentColor" fill-opacity="0.4" />
-                            <circle cx="200" cy="385" r="2" fill="currentColor" fill-opacity="0.4" />
+                    <div class="aperture-frame">
+                        <svg class="aperture-reticle-svg" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="140" cy="140" r="132" stroke="currentColor" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 5" />
+                            <circle cx="140" cy="140" r="114" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" />
+                            <line x1="140" y1="0" x2="140" y2="22" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2" />
+                            <line x1="140" y1="258" x2="140" y2="280" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2" />
+                            <line x1="0" y1="140" x2="22" y2="140" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2" />
+                            <line x1="258" y1="140" x2="280" y2="140" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2" />
+                            <rect x="24" y="24" width="232" height="232" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" />
                         </svg>
+                        <img src="profile_photo.png" alt="Portrait of Sumukha R Bharadwaj" class="hero-portrait-img">
+                    </div>
 
-                        <!-- Profile Portrait Frame -->
-                        <div class="hero-portrait-frame">
-                            <img src="profile_photo.png" alt="Profile Photo of Sumukha R Bharadwaj" class="hero-portrait-img">
+                    <div class="aperture-meta-grid">
+                        <div class="aperture-meta-cell">
+                            <span class="aperture-meta-label">Institution</span>
+                            <span class="aperture-meta-val"><a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">IIST Trivandrum</a></span>
+                        </div>
+                        <div class="aperture-meta-cell">
+                            <span class="aperture-meta-label">PhD Advisor</span>
+                            <span class="aperture-meta-val"><a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank" rel="noopener noreferrer">Dr. Anand Narayanan</a></span>
+                        </div>
+                        <div class="aperture-meta-cell">
+                            <span class="aperture-meta-label">Latest ApJ Paper</span>
+                            <span class="aperture-meta-val"><a href="https://doi.org/10.3847/1538-4357/ae853b" target="_blank" rel="noopener noreferrer">ApJ 1008, 155 (2026)</a></span>
+                        </div>
+                        <div class="aperture-meta-cell">
+                            <span class="aperture-meta-label">ORCID iD</span>
+                            <span class="aperture-meta-val"><a href="https://orcid.org/0009-0003-1664-3369" target="_blank" rel="noopener noreferrer">0009-0003-1664-3369</a></span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Interactive Hero Sightline Telemetry HUD -->
+            <div class="hero-hud-bar">
+                <div class="container hero-hud-inner">
+                    <div class="hud-metrics">
+                        <div class="hud-metric">
+                            <span class="hud-metric-label">SIGHTLINE COORD //</span>
+                            <span class="hud-metric-value" id="hud-coord-val">01h07m17.4s -02°39.8'</span>
+                        </div>
+                        <div class="hud-metric">
+                            <span class="hud-metric-label">IMPACT PARAMETER (&rho;/R<sub>vir</sub>) //</span>
+                            <span class="hud-metric-value" id="hud-impact-val">0.90 R_vir</span>
+                        </div>
+                        <div class="hud-metric">
+                            <span class="hud-metric-label">PROBED CGM PHASE //</span>
+                            <span class="hud-metric-value" id="hud-phase-val">Cold-Mode Inflow Stream (pLLS &bull; H I + Mg II)</span>
+                        </div>
+                    </div>
+                    <div class="hud-controls">
+                        <button type="button" class="hud-btn" id="hero-phase-toggle">Layer: Multiphase (All)</button>
+                        <button type="button" class="hud-btn" id="hero-sim-toggle">Pause Field</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             01 // COSMOLOGICAL SIMULATIONS & SIGHTLINE THEATRE (#simulations)
+             =================================================================== -->
+        <section id="simulations" class="section section-alt">
+            <div class="container">
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">01 // Simulations &amp; Sightlines</span>
+                        <span class="section-subtag">IllustrisTNG &bull; EAGLE &bull; HST/COS</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Cosmological Hydrodynamical Simulations &amp; CGM Spectroscopy</h2>
+                        <p>
+                            Absorption-line observations capture a 1D pencil-beam skewer through a turbulent, 3D multiphase halo. Cosmological magnetohydrodynamical simulations (<a href="https://www.tng-project.org/" target="_blank" rel="noopener noreferrer">IllustrisTNG</a> and <a href="https://astro.dur.ac.uk/ICC/Eagle/" target="_blank" rel="noopener noreferrer">EAGLE</a>) provide the physical framework to connect observed H I, Mg II, O VI, and Ne VIII kinematics to cold-mode filamentary accretion and SMBH/stellar feedback.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sim-theatre-shell">
+                    <!-- Theatre Mode Selector Tabs -->
+                    <div class="sim-theatre-tabs" role="tablist">
+                        <button type="button" class="sim-tab-btn active" data-sim-tab="viewport-tng100" role="tab">
+                            <span class="sim-tab-kicker">Stream 01 &bull; IllustrisTNG Movie</span>
+                            <span class="sim-tab-title">TNG100 CGM Feedback Evolution (Zinger et al. 2020)</span>
+                        </button>
+                        <button type="button" class="sim-tab-btn" data-sim-tab="viewport-sightline" role="tab">
+                            <span class="sim-tab-kicker">Stream 02 &bull; Interactive Spectroscopy Lab</span>
+                            <span class="sim-tab-title">Quasar Sightline &amp; HST/COS Voigt Profile Explorer</span>
+                        </button>
+                        <button type="button" class="sim-tab-btn" data-sim-tab="viewport-atlas" role="tab">
+                            <span class="sim-tab-kicker">Stream 03 &bull; Simulation Comparison</span>
+                            <span class="sim-tab-title">TNG50 Cold CGM Clouds &amp; EAGLE Cosmic Web</span>
+                        </button>
+                    </div>
+
+                    <!-- VIEWPORT 1: Official IllustrisTNG TNG100 Video (Zinger et al. 2020) -->
+                    <div id="viewport-tng100" class="sim-viewport-panel active" role="tabpanel">
+                        <div class="tng-video-layout">
+                            <div>
+                                <div class="tng-video-stage">
+                                    <video id="tng-main-video" class="tng-video-element" autoplay controls loop muted playsinline preload="auto" poster="assets/simulations/cgm_multiphase_sim.jpg">
+                                        <source src="assets/simulations/tng100_sb0_194946_zinger20.mp4" type="video/mp4">
+                                        <source src="https://www.tng-project.org/movies/tng/tng100_sb0_194946_zinger20.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video. You can view the official simulation directly at <a href="https://www.tng-project.org/movies/tng/tng100_sb0_194946_zinger20.mp4" target="_blank" rel="noopener noreferrer">IllustrisTNG Media</a>.
+                                    </video>
+                                    <div class="tng-video-controls-bar">
+                                        <div class="tng-ctrl-group">
+                                            <button type="button" class="hud-btn" id="tng-play-btn">Play / Pause</button>
+                                            <button type="button" class="hud-btn" id="tng-rate-btn">Speed: 1.0x</button>
+                                            <button type="button" class="hud-btn" id="tng-restart-btn">Restart (z &rarr; 0)</button>
+                                        </div>
+                                        <span class="tng-status-note" id="tng-status-text">TNG100 Halo #194946 (M* = 2 &times; 10&sup1;&sup1; M&#9737;) &bull; <a href="https://www.tng-project.org/movies/tng/tng100_sb0_194946_zinger20.mp4" target="_blank" rel="noopener noreferrer">Direct MP4 &nearr;</a></span>
+                                    </div>
+                                </div>
+
+                                <div class="sim-credit-bar">
+                                    <div>
+                                        <strong>Simulation Credit:</strong> E. Zinger et al. (<a href="https://academic.oup.com/mnras/article/499/1/768/5905089" target="_blank" rel="noopener noreferrer">MNRAS 499, 768, 2020</a>) &amp; <a href="https://www.tng-project.org/media/" target="_blank" rel="noopener noreferrer">The IllustrisTNG Collaboration</a> (D. Nelson, V. Springel, A. Pillepich et al.).
+                                    </div>
+                                    <a href="https://www.tng-project.org/media/" target="_blank" rel="noopener noreferrer" class="pub-action-link">TNG Media Archive &nearr;</a>
+                                </div>
+                            </div>
+
+                            <!-- 8-Panel Interactive Physical Field Guide -->
+                            <div class="tng-inspector-box">
+                                <div class="tng-inspector-header">
+                                    <h3>8-Panel CGM Physical Field Guide</h3>
+                                    <p>Click any of the 8 co-evolving physical quantities shown in the TNG100 simulation movie to inspect how it connects to quasar absorption diagnostics:</p>
+                                </div>
+
+                                <div class="eight-panel-grid">
+                                    <button type="button" class="panel-chip-btn" data-panel-key="stars">
+                                        <span class="panel-chip-name">1. Stellar Density</span>
+                                        <span class="panel-chip-sym">&Sigma;<sub>*</sub></span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="temp">
+                                        <span class="panel-chip-name">2. Gas Temperature</span>
+                                        <span class="panel-chip-sym">T (K)</span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="pressure">
+                                        <span class="panel-chip-name">3. Gas Pressure</span>
+                                        <span class="panel-chip-sym">P</span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn active" data-panel-key="metallicity">
+                                        <span class="panel-chip-name">4. Metallicity</span>
+                                        <span class="panel-chip-sym">Z / Z<sub>&#9737;</sub></span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="density">
+                                        <span class="panel-chip-name">5. Gas Density</span>
+                                        <span class="panel-chip-sym">n<sub>H</sub></span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="entropy">
+                                        <span class="panel-chip-name">6. Specific Entropy</span>
+                                        <span class="panel-chip-sym">K</span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="tcool">
+                                        <span class="panel-chip-name">7. Cooling Time</span>
+                                        <span class="panel-chip-sym">t<sub>cool</sub></span>
+                                    </button>
+                                    <button type="button" class="panel-chip-btn" data-panel-key="vrad">
+                                        <span class="panel-chip-name">8. Radial Velocity</span>
+                                        <span class="panel-chip-sym">v<sub>rad</sub></span>
+                                    </button>
+                                </div>
+
+                                <div class="panel-detail-readout">
+                                    <div class="panel-detail-title" id="panel-detail-title">Panel 04 // Gas-Phase Metallicity (Z / Z&#9737;)</div>
+                                    <p class="panel-detail-desc" id="panel-detail-desc">
+                                        Contrasts chemically pristine/sub-solar intergalactic accretion streams (such as the log(Z/Z&#9737;) = &minus;1.05 partial Lyman limit absorber toward LBQS 0107&minus;0235) against metal-enriched bipolar outflows driven by supernovae and AGN feedback.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIEWPORT 2: Interactive Quasar Sightline & HST/COS Spectrometer -->
+                    <div id="viewport-sightline" class="sim-viewport-panel" role="tabpanel">
+                        <div class="lab-preset-row">
+                            <button type="button" class="preset-btn active" data-preset="lbqs0107">Preset 1: LBQS 0107&minus;0235 (z=0.87641 pLLS &bull; ApJ 2026)</button>
+                            <button type="button" class="preset-btn" data-preset="pks0405">Preset 2: PKS 0405&minus;123 &amp; HE 0226&minus;4110 (Ne VIII + O VI Pair Halo)</button>
+                            <button type="button" class="preset-btn" data-preset="outflow">Preset 3: Minor-Axis Bipolar Feedback Outflow</button>
+                            <button type="button" class="preset-btn" data-preset="igm">Preset 4: Outer IGM Cosmic Web Filament</button>
                         </div>
 
-                        <!-- Technical Metadata Chip -->
-                        <div class="hero-portrait-badge">
-                            <span class="badge-icon">&#9672;</span>
-                            <span>HST/COS &bull; VLT/MUSE &bull; CGM</span>
+                        <div class="sightline-lab-grid">
+                            <div class="halo-map-box">
+                                <div class="lab-box-header">
+                                    <span class="lab-box-title">Simulated Galaxy-Pair Halo (Drag QSO Sightline)</span>
+                                    <span class="telemetry-val" id="sightline-caption">LBQS 0107&minus;0235 (z = 0.87641 pLLS &bull; Bharadwaj et al. 2026)</span>
+                                </div>
+                                <canvas id="halo-sightline-canvas" width="400" height="400" aria-label="Interactive Galaxy Halo Sightline Map"></canvas>
+                                <div class="sightline-params-strip">
+                                    <div class="param-cell">
+                                        <span class="param-label">Impact (&rho;/R<sub>vir</sub>)</span>
+                                        <span class="param-val" id="param-rho">0.90 R_vir</span>
+                                    </div>
+                                    <div class="param-cell">
+                                        <span class="param-label">Metallicity [Z/H]</span>
+                                        <span class="param-val" id="param-z">-1.05 dex</span>
+                                    </div>
+                                    <div class="param-cell">
+                                        <span class="param-label">Density log n<sub>H</sub></span>
+                                        <span class="param-val" id="param-nh">-3.10 cm⁻³</span>
+                                    </div>
+                                    <div class="param-cell">
+                                        <span class="param-label">Gas Temp T</span>
+                                        <span class="param-val" id="param-temp">10^4.25 K</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spectra-plot-box">
+                                <div class="lab-box-header">
+                                    <span class="lab-box-title">Synthetic HST/COS Normalized Absorption Profiles F(&Delta;v)</span>
+                                    <span class="telemetry-key">Rest-Frame Velocity &Delta;v &in; [&minus;300, +300] km s&minus;&sup1;</span>
+                                </div>
+                                <canvas id="cos-spectra-canvas" width="520" height="320" aria-label="Simulated HST/COS Absorption Line Profiles"></canvas>
+                                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+                                    <strong>Observational Diagnostic:</strong> Along the projected major axis (<a href="https://arxiv.org/abs/2608.09418" target="_blank" rel="noopener noreferrer">Bharadwaj et al. 2026</a>), cool co-rotating accretion filaments produce strong H I partial Lyman limit absorption (log N(H I) &approx; 16.8) and narrow Mg II with sub-solar metallicity (log Z/Z<sub>&#9737;</sub> = &minus;1.05). Piercing the warm-hot group/pair halo (<a href="#publications">PKS 0405&minus;123 &amp; HE 0226&minus;4110</a>) reveals broad O VI and Ne VIII transitions at T &sim; 10<sup>5.5&ndash;6.0</sup> K.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIEWPORT 3: IllustrisTNG (TNG50) & EAGLE Simulation Atlas -->
+                    <div id="viewport-atlas" class="sim-viewport-panel" role="tabpanel">
+                        <div class="sim-atlas-grid">
+                            <article class="sim-atlas-card">
+                                <div class="sim-atlas-img-wrap">
+                                    <img src="assets/simulations/cgm_multiphase_sim.jpg" alt="Multiphase Cold Accretion Filaments and Bipolar Feedback Outflows">
+                                    <span class="sim-atlas-badge">TNG50 // MULTIPHASE CGM</span>
+                                </div>
+                                <div class="sim-atlas-body">
+                                    <h3 class="sim-atlas-title">Resolving Small-Scale Cold Circumgalactic Clouds in TNG50</h3>
+                                    <p class="sim-atlas-desc">
+                                        At ~100&ndash;200 pc spatial resolution in <a href="https://www.tng-project.org/media/" target="_blank" rel="noopener noreferrer">IllustrisTNG50</a>, <a href="https://academic.oup.com/mnras/article-abstract/498/2/2391/5900540" target="_blank" rel="noopener noreferrer">Nelson et al. (2020)</a> show that hot virialized halos (T &sim; 10<sup>6&ndash;7</sup> K) host tens of thousands of small, cold, magnetically supported Mg II and H I clouds condensing from filamentary inflows and cooling shocks.
+                                    </p>
+                                    <div class="sim-atlas-credit">
+                                        Ref: D. Nelson et al., <a href="https://academic.oup.com/mnras/article-abstract/498/2/2391/5900540" target="_blank" rel="noopener noreferrer">MNRAS 498, 2391 (2020)</a> &bull; <a href="https://arxiv.org/abs/2005.09654" target="_blank" rel="noopener noreferrer">arXiv:2005.09654</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="sim-atlas-card">
+                                <div class="sim-atlas-img-wrap">
+                                    <img src="assets/simulations/TNG50_galaxies_Halpha_starlight_z2_1k.jpg" onerror="this.onerror=null;this.src='https://www.tng-project.org/static/tng/media/TNG50_galaxies_Halpha_starlight_z2_1k.jpg';" alt="TNG50 Star-Forming Disk Galaxies H-alpha and Optical Starlight">
+                                    <span class="sim-atlas-badge">TNG50 // GALAXY KINEMATICS</span>
+                                </div>
+                                <div class="sim-atlas-body">
+                                    <h3 class="sim-atlas-title">Galactic Outflows &amp; Disk Kinematics in TNG50</h3>
+                                    <p class="sim-atlas-desc">
+                                        <a href="https://academic.oup.com/mnras/article/490/3/3234/5556547" target="_blank" rel="noopener noreferrer">Nelson et al. (2019)</a> and <a href="https://academic.oup.com/mnras/article/490/3/3196/5566345" target="_blank" rel="noopener noreferrer">Pillepich et al. (2019)</a> demonstrate how isotropic supernovae and SMBH energy injection collimate into bipolar outflows perpendicular to rotating star-forming disks, while co-planar filaments feed cold-mode accretion near the major axis.
+                                    </p>
+                                    <div class="sim-atlas-credit">
+                                        Credit: A. Pillepich &amp; D. Nelson / <a href="https://www.tng-project.org/media/" target="_blank" rel="noopener noreferrer">TNG Collaboration</a> &bull; <a href="https://www.youtube.com/watch?v=cNT5yAqpBmI" target="_blank" rel="noopener noreferrer">TNG50 Cluster Video &nearr;</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="sim-atlas-card">
+                                <div class="sim-atlas-img-wrap">
+                                    <img src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/extra_pics/rotation.png" alt="The EAGLE Cosmological Hydrodynamical Simulation Suite">
+                                    <span class="sim-atlas-badge">EAGLE // HYDRODYNAMICAL SUITE</span>
+                                </div>
+                                <div class="sim-atlas-body">
+                                    <h3 class="sim-atlas-title">The EAGLE Project: Galaxy Assembly &amp; Environments</h3>
+                                    <p class="sim-atlas-desc">
+                                        The <a href="https://astro.dur.ac.uk/ICC/Eagle/highlights.php" target="_blank" rel="noopener noreferrer">EAGLE cosmological hydrodynamical simulation suite</a> (<a href="https://academic.oup.com/mnras/article/446/1/521/1316115" target="_blank" rel="noopener noreferrer">Schaye et al. 2015</a>; <a href="https://academic.oup.com/mnras/article/450/2/1937/984366" target="_blank" rel="noopener noreferrer">Crain et al. 2015</a>) models 7 billion particles across a 100 cMpc volume, predicting the distribution of H I Lyman limit systems and warm-hot O VI/Ne VIII halos in group environments.
+                                    </p>
+                                    <div class="sim-atlas-credit">
+                                        Credit: J. Schaye, R. A. Crain &amp; <a href="https://astro.dur.ac.uk/ICC/Eagle/highlights.php" target="_blank" rel="noopener noreferrer">The EAGLE Collaboration (Durham / Leiden)</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -203,188 +419,275 @@
         </section>
 
         <!-- ===================================================================
-             RESEARCH SECTION (Intellectual Core of the Portfolio)
+             02 // OBSERVATIONAL RESEARCH & ACTIVE PROJECTS (#research)
              =================================================================== -->
         <section id="research" class="section">
             <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Observational Research</div>
-                    <h2 class="section-title">Research Areas &amp; Projects</h2>
-                    <p class="section-description">Investigating the multi-phase circumgalactic medium through high-resolution UV space spectroscopy and optical integral field kinematics.</p>
-                </div>
-
-                <!-- Conceptual Synthesis Pathway -->
-                <div class="research-synthesis-bar">
-                    <span class="synthesis-label">Core Pipeline:</span>
-                    <div class="synthesis-flow">
-                        <span class="synthesis-step">Quasar Absorption Spectroscopy</span>
-                        <span class="synthesis-arrow">&rarr;</span>
-                        <span class="synthesis-step">CGM / IGM Multiphase Gas</span>
-                        <span class="synthesis-arrow">&rarr;</span>
-                        <span class="synthesis-step">Galaxy Environments &amp; Kinematics</span>
-                        <span class="synthesis-arrow">&rarr;</span>
-                        <span class="synthesis-step">Galaxy Evolution &amp; Baryon Cycle</span>
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">02 // Research Program</span>
+                        <span class="section-subtag">UV Spectroscopy &times; 3D IFU</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Observational Architecture &amp; Active Projects</h2>
+                        <p>
+                            Combining high-resolution far-ultraviolet space spectroscopy (<em>HST</em>/COS) with optical 3D integral field unit observations (<em>VLT</em>/MUSE) and photoionization modeling (<code>Cloudy</code>) to decode the baryon cycle around galaxies.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Research Areas Cards -->
-                <div class="research-areas-grid">
-                    <div class="research-concept-card">
-                        <div class="concept-badge">Spectroscopic Diagnostics</div>
-                        <h3 class="concept-title">Circumgalactic Medium and Intergalactic Medium</h3>
-                        <p class="concept-desc">Studying the circumgalactic medium using quasar absorption line spectroscopy to understand galaxy evolution, gas accretion, outflows, and feedback processes in galaxies.</p>
-                        <div class="concept-tags">
-                            <span class="research-tag">CGM</span>
-                            <span class="research-tag">IGM</span>
-                            <span class="research-tag">Quasar Absorption</span>
-                            <span class="research-tag">Gas Accretion</span>
-                            <span class="research-tag">Outflows</span>
-                            <span class="research-tag">Baryon Cycle</span>
+                <div class="research-ledger">
+                    <article class="research-pillar">
+                        <div class="pillar-kicker">
+                            <span>Pillar 01 // Warm-Hot Circumgalactic Gas</span>
+                            <span>HST/COS + VLT/MUSE</span>
                         </div>
-                    </div>
+                        <h3 class="pillar-title">Ne VIII &amp; O VI Absorbers in Galaxy Pair &amp; Group Halos</h3>
+                        <p class="pillar-desc">
+                            Investigating the warm-hot plasma phase (T &sim; 10<sup>5.5&ndash;6.0</sup> K) of the circumgalactic medium traced by the high-ionization <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-astro-091916-055240" target="_blank" rel="noopener noreferrer">Ne VIII &lambda;&lambda;770, 780 and O VI &lambda;&lambda;1031, 1037 doublets</a> toward background quasars <strong>PKS 0405&minus;123</strong> and <strong>HE 0226&minus;4110</strong>. By mapping the surrounding galaxy environments with <em>VLT</em>/MUSE, we evaluate whether warm-hot absorbers trace virialized intragroup gas, tidal interactions in galaxy pairs, or feedback-driven interfaces.
+                        </p>
+                        <div class="pillar-metrics-row">
+                            <span class="spec-tag">Ne VIII &lambda;&lambda;770, 780</span>
+                            <span class="spec-tag">O VI &lambda;&lambda;1031, 1037</span>
+                            <span class="spec-tag">Galaxy Pair Halos</span>
+                            <span class="spec-tag">Collisional vs. Photoionization</span>
+                        </div>
+                    </article>
 
-                    <div class="research-concept-card">
-                        <div class="concept-badge">Integral Field Spectroscopy</div>
-                        <h3 class="concept-title">Galaxy&ndash;Absorber Connections</h3>
-                        <p class="concept-desc">Using <em>VLT</em>&ndash;MUSE integral field spectroscopy to identify galaxies associated with absorption systems and study galaxy kinematics and environments to determine whether absorbers trace inflows, outflows, or extended circumgalactic gas.</p>
-                        <div class="concept-tags">
-                            <span class="research-tag">VLT/MUSE</span>
-                            <span class="research-tag">HST/COS</span>
-                            <span class="research-tag">Galaxy Kinematics</span>
-                            <span class="research-tag">Inflows &amp; Outflows</span>
-                            <span class="research-tag">Pair Halos</span>
+                    <article class="research-pillar">
+                        <div class="pillar-kicker">
+                            <span>Pillar 02 // Cold-Mode Accretion &amp; Lyman Limit Systems</span>
+                            <span>ApJ 1008, 155 (2026)</span>
                         </div>
-                    </div>
-                </div>
+                        <h3 class="pillar-title">Partial Lyman Limit Systems &amp; Galaxy&ndash;Absorber Kinematics</h3>
+                        <p class="pillar-desc">
+                            Analyzing optically thin and partial Lyman limit systems (pLLS; 16.0 &lesssim; log N(H I)/cm<sup>&minus;2</sup> &lesssim; 17.2) in conjunction with 3D morpho-kinematic modeling (<code>GalPaK3D</code>) and stellar population synthesis (<code>Prospector</code>, <code>BAGPIPES</code>) of host galaxies. Our study toward <strong>LBQS 0107&minus;0235</strong> (<a href="https://arxiv.org/abs/2608.09418" target="_blank" rel="noopener noreferrer">z = 0.87641</a>) reveals metal-poor (0.1 Z<sub>&#9737;</sub>) gas aligned with the major axes of a rotating galaxy pair, consistent with cold-mode accretion streams.
+                        </p>
+                        <div class="pillar-metrics-row">
+                            <span class="spec-tag">pLLS (z = 0.87641)</span>
+                            <span class="spec-tag">log(Z/Z&#9737;) = &minus;1.05</span>
+                            <span class="spec-tag">GalPaK3D Kinematics</span>
+                            <span class="spec-tag">Cloudy Modeling</span>
+                        </div>
+                    </article>
 
-                <!-- Current Projects -->
-                <div class="projects-header">
-                    <h3 class="projects-title">Current Research Projects</h3>
-                    <p class="projects-subtitle">Active investigative projects utilizing space- and ground-based spectroscopic datasets.</p>
-                </div>
+                    <article class="research-pillar">
+                        <div class="pillar-kicker">
+                            <span>Pillar 03 // Cool Low-Redshift CGM</span>
+                            <span>Large Spectroscopic Surveys</span>
+                        </div>
+                        <h3 class="pillar-title">Weak Mg II Absorbers &amp; Environmental Demographics</h3>
+                        <p class="pillar-desc">
+                            Probing the sub-kiloparsec cool phase (T &sim; 10<sup>4</sup> K) of low-redshift circumgalactic and intergalactic environments using weak Mg II &lambda;&lambda;2796, 2803 absorption systems across large archival spectroscopic surveys. Characterizing how absorber equivalent widths, cloud densities, and metallicities scale with host galaxy star-formation rates and impact parameter.
+                        </p>
+                        <div class="pillar-metrics-row">
+                            <span class="spec-tag">Weak Mg II &lambda;&lambda;2796, 2803</span>
+                            <span class="spec-tag">Low-z CGM Demographics</span>
+                            <span class="spec-tag">Voigt Profile Fitting</span>
+                        </div>
+                    </article>
 
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 3H15"></path>
-                                <path d="M10 9H14"></path>
-                                <path d="M3.73 18.06A7.05 7.05 0 0 1 12 12a7.05 7.05 0 0 1 8.27 6.06L21 21H3c.27-1.39.73-2.78 1.4-4.06z"></path>
-                                <path d="M12 12V3"></path>
-                            </svg>
+                    <article class="research-pillar">
+                        <div class="pillar-kicker">
+                            <span>Pillar 04 // Prior Observational Research</span>
+                            <span>Indian Institute of Astrophysics (IIA)</span>
                         </div>
-                        <div class="project-body">
-                            <div class="project-meta-pill">Project 1</div>
-                            <h4 class="project-title">Ne VIII Absorbers in Quasar Spectra</h4>
-                            <p class="project-desc">Investigating warm-hot circumgalactic gas in galaxy pair halos and group environments traced by Ne VIII and O VI absorption lines in quasar spectra.</p>
-                            <div class="project-tags">
-                                <span class="research-tag">HST/COS</span>
-                                <span class="research-tag">VLT/MUSE</span>
-                                <span class="research-tag">Ne VIII</span>
-                                <span class="research-tag">O VI</span>
-                                <span class="research-tag">Warm-Hot Gas</span>
-                            </div>
+                        <h3 class="pillar-title">Transiting Exoplanetary Atmospheres &amp; Spectral Reduction</h3>
+                        <p class="pillar-desc">
+                            During my Master&rsquo;s dissertation at the <a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA), Bengaluru</a> under Dr. Sivarani Thirupathi, I performed end-to-end spectroscopic reduction of ground-based transit observations of hot Jupiters <strong>HAT-P1-b</strong> and <strong>WASP-33b</strong> using <code>IRAF</code>, coupled with Markov chain Monte Carlo (MCMC) transit light-curve fitting via <code>pylightcurve</code>.
+                        </p>
+                        <div class="pillar-metrics-row">
+                            <span class="spec-tag">HAT-P1-b &amp; WASP-33b</span>
+                            <span class="spec-tag">IRAF / PyRAF</span>
+                            <span class="spec-tag">MCMC Light-Curve Fitting</span>
                         </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="3"></circle>
-                                <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
-                                <path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"></path>
-                            </svg>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta-pill">Project 2</div>
-                            <h4 class="project-title">Weak Mg II Absorbers &amp; Environments</h4>
-                            <p class="project-desc">Weak Mg II absorbers and their environments using large spectroscopic survey datasets to probe cool low-redshift circumgalactic gas distributions.</p>
-                            <div class="project-tags">
-                                <span class="research-tag">Spectroscopic Surveys</span>
-                                <span class="research-tag">Mg II</span>
-                                <span class="research-tag">Low Redshift</span>
-                                <span class="research-tag">CGM Kinematics</span>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================
-             SOFTWARE TOOLS SECTION (Scientific Software Showcase)
+             03 // PUBLICATIONS & MANUSCRIPTS (#publications)
              =================================================================== -->
-        <section id="software" class="section bg-secondary">
+        <section id="publications" class="section section-alt">
             <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Scientific Software</div>
-                    <h2 class="section-title">Cosmology Calculator</h2>
-                    <p class="section-description">A portable scientific tool implementing the standard &Lambda;CDM cosmological framework for computing observational cosmological metrics.</p>
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">03 // Academic Output</span>
+                        <span class="section-subtag">The Astrophysical Journal</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Peer-Reviewed Publications &amp; Manuscripts</h2>
+                        <p>
+                            First-author observational investigations of multiphase circumgalactic gas, cold-mode accretion, and warm-hot galaxy pair halos in <em>The Astrophysical Journal</em>.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="software-showcase-card">
-                    <div class="software-card-header">
-                        <div class="software-app-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2v20"></path>
-                                <path d="m17 5-5-3-5 3v14l5 3 5-3z"></path>
-                                <path d="m2 12 10-6"></path>
-                                <path d="m22 12-10-6"></path>
-                            </svg>
-                        </div>
-                        <div class="software-header-body">
-                            <div class="software-header-top">
-                                <h3 class="software-app-name">Cosmology Calculator</h3>
-                                <div class="software-tags-row">
-                                    <span class="software-chip">Flutter</span>
-                                    <span class="software-chip">&Lambda;CDM</span>
-                                    <span class="software-chip">Cosmology</span>
-                                    <span class="software-chip">Android</span>
-                                </div>
-                            </div>
-                            <p class="software-summary">A Flutter-based cosmological calculator implementing the standard &Lambda;CDM cosmological model for rapid computation of distances, lookback times, and thermodynamic scaling parameters across cosmic epochs.</p>
-                        </div>
-                    </div>
-
-                    <div class="software-card-body">
-                        <div class="software-metrics-heading">Computed Cosmological Quantities</div>
-                        <div class="computed-quantities-grid">
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">t<sub>univ</sub></span>
-                                <span class="quantity-name">Age of the Universe</span>
-                            </div>
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">t<sub>lb</sub></span>
-                                <span class="quantity-name">Lookback Time</span>
-                            </div>
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">D<sub>C</sub></span>
-                                <span class="quantity-name">Comoving Distance</span>
-                            </div>
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">D<sub>A</sub></span>
-                                <span class="quantity-name">Angular Diameter Distance</span>
-                            </div>
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">D<sub>L</sub></span>
-                                <span class="quantity-name">Luminosity Distance</span>
-                            </div>
-                            <div class="quantity-tile">
-                                <span class="quantity-symbol">T(z)</span>
-                                <span class="quantity-name">CMB Temperature Scaling</span>
+                <div class="pub-ledger">
+                    <!-- Published ApJ Paper -->
+                    <article class="pub-entry">
+                        <div class="pub-top-meta">
+                            <div class="pub-status-group">
+                                <span class="pub-pill pub-pill--published">Published &bull; ApJ 1008, 155 (2026)</span>
+                                <span class="pub-pill pub-pill--journal">DOI: 10.3847/1538-4357/ae853b</span>
+                                <span class="pub-pill pub-pill--journal">arXiv:2608.09418 [astro-ph.GA]</span>
                             </div>
                         </div>
 
-                        <div class="software-footer-actions">
-                            <a href="https://github.com/bharadwajsumukha/cosmology-calculator-android/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                                Download APK (Android Releases)
+                        <h3 class="pub-entry-title">
+                            A Partial Lyman Limit Absorber Tracing Cold-Mode Accretion
+                        </h3>
+                        <div class="pub-entry-subtitle">
+                            arXiv Preprint Title: &ldquo;A Partial Lyman Limit Absorber in the Halo of a Galaxy Pair: A Possible Signature of Gas Inflow&rdquo;
+                        </div>
+
+                        <div class="pub-authors">
+                            <strong>Sumukha R. Bharadwaj</strong>, Anand Narayanan, Sowgat Muzahid, Jane C. Charlton, and Sebastiano Cantalupo
+                        </div>
+
+                        <div class="pub-quant-strip">
+                            <span class="quant-chip">Quasar: <span>LBQS 0107&minus;0235</span></span>
+                            <span class="quant-chip">z<sub>abs</sub>: <span>0.87641</span></span>
+                            <span class="quant-chip">Metallicity: <span>log(Z/Z&#9737;) = &minus;1.05 (0.1 Z&#9737;)</span></span>
+                            <span class="quant-chip">Density: <span>log(n<sub>H</sub>/cm&minus;&sup3;) &approx; &minus;3.1</span></span>
+                            <span class="quant-chip">Impact: <span>&rho;/R<sub>vir</sub> &approx; 0.9 (G1 &amp; G2 Pair)</span></span>
+                            <span class="quant-chip">Kinematics: <span>|&Delta;v| = 18 &amp; 99 km s&minus;&sup1;</span></span>
+                        </div>
+
+                        <div class="pub-actions-row">
+                            <a href="https://doi.org/10.3847/1538-4357/ae853b" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                                Read in The Astrophysical Journal (IOP) &nearr;
                             </a>
-                            <p class="software-note">Encountered an issue or have a suggestion? Feel free to <a href="#contact">get in touch</a>.</p>
+                            <a href="https://arxiv.org/abs/2608.09418" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                                View on arXiv (2608.09418) &nearr;
+                            </a>
+                            <button type="button" class="pub-action-link" id="toggle-apj-abstract">Read Abstract</button>
+                            <button type="button" class="pub-action-link" id="copy-apj-bibtex">Copy BibTeX</button>
+                        </div>
+
+                        <div class="pub-abstract-drawer" id="apj-abstract-drawer">
+                            <strong>Abstract (<a href="https://arxiv.org/abs/2608.09418" target="_blank" rel="noopener noreferrer">arXiv:2608.09418</a>):</strong> We present an analysis of a partial Lyman limit system at z = 0.87641 detected in the <em>HST</em>/COS spectrum of the background quasar LBQS 0107&minus;0235. The absorber exhibits a simple kinematic structure, with the metal-lines and the H I Lyman-series absorption well described by a single component. Photoionization modeling yields a gas metallicity of one-tenth solar and a hydrogen number density of n<sub>H</sub> &approx; 8.5 &times; 10<sup>&minus;4</sup> cm<sup>&minus;3</sup> (log<sub>10</sub>(n<sub>H</sub>/cm<sup>&minus;3</sup>) &approx; &minus;3.1). At the absorber redshift, the <em>VLT</em>/MUSE data show two galaxies (G1 and G2) at normalized impact parameters of &rho;/R<sub>vir</sub> &approx; 0.9 and velocity separations of |&Delta;v| = 18 and 99 km s<sup>&minus;1</sup>, respectively, from the absorber. Both galaxies have rotating disks with stellar masses of M<sub>*</sub> &approx; 6 &times; 10<sup>9</sup> and &approx; 2.2 &times; 10<sup>10</sup> M<sub>&#9737;</sub>. Their 100-Myr-averaged star formation rates are &approx; 2.5 and &approx; 2.2 M<sub>&#9737;</sub> yr<sup>&minus;1</sup>. The absorber is positioned very close to the projected major axis of both galaxies. The absorber&rsquo;s orientation, kinematics, and sub-solar metallicity (log<sub>10</sub>(Z/Z<sub>&#9737;</sub>) = &minus;1.05) are consistent with the absorption tracing a sub-solar metallicity inflowing stream, though a galaxy&ndash;galaxy interaction origin cannot be excluded. We discuss these scenarios in the context of cosmological simulations of cold-mode accretion and CGM gas flows around galaxies with halos of mass M<sub>h</sub> &lesssim; 10<sup>12</sup> M<sub>&#9737;</sub>.
+                        </div>
+                    </article>
+
+                    <!-- Submitted ApJ Paper -->
+                    <article class="pub-entry">
+                        <div class="pub-top-meta">
+                            <div class="pub-status-group">
+                                <span class="pub-pill pub-pill--review">Submitted &bull; Under Review</span>
+                                <span class="pub-pill pub-pill--journal">The Astrophysical Journal (ApJ)</span>
+                            </div>
+                        </div>
+
+                        <h3 class="pub-entry-title">
+                            Warm-hot circumgalactic gas in galaxy pair halos: Ne VIII and O VI absorption toward PKS 0405&minus;123 and HE 0226&minus;4110
+                        </h3>
+
+                        <div class="pub-authors">
+                            <strong>Sumukha R. Bharadwaj</strong>, et al.
+                        </div>
+
+                        <div class="pub-quant-strip">
+                            <span class="quant-chip">Sightlines: <span>PKS 0405&minus;123 &amp; HE 0226&minus;4110</span></span>
+                            <span class="quant-chip">Diagnostics: <span>Ne VIII &lambda;&lambda;770, 780 &amp; O VI &lambda;&lambda;1031, 1037</span></span>
+                            <span class="quant-chip">Environment: <span>Galaxy Pair Halos (HST/COS + VLT/MUSE)</span></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             04 // SCIENTIFIC SOFTWARE — LAMBDA-CDM COSMOLOGY CALCULATOR (#software)
+             =================================================================== -->
+        <section id="software" class="section">
+            <div class="container">
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">04 // Scientific Software</span>
+                        <span class="section-subtag">&Lambda;CDM Framework &bull; Flutter &amp; Web</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>&Lambda;CDM Cosmology Calculator (Interactive &amp; Android APK)</h2>
+                        <p>
+                            A portable cosmological utility implementing numerical Friedmann&ndash;Lema&icirc;tre&ndash;Robertson&ndash;Walker (&Lambda;CDM) integration for computing lookback times, comoving/angular/luminosity distances, and physical angular scales at absorber redshifts. Test it live below or download the native Flutter Android release.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cosmo-workbench">
+                    <div class="cosmo-inputs-col">
+                        <div class="lab-box-header" style="margin-bottom: 0.25rem;">
+                            <span class="lab-box-title">Cosmological Parameters (Planck 2018 Default)</span>
+                            <span class="telemetry-val">Flat / Non-Flat &Lambda;CDM</span>
+                        </div>
+
+                        <div class="lab-preset-row" style="margin-bottom: 0.25rem;">
+                            <button type="button" class="preset-btn cosmo-z-preset" data-z="0.87641">z = 0.87641 (LBQS 0107&minus;0235 pLLS)</button>
+                            <button type="button" class="preset-btn cosmo-z-preset" data-z="0.35">z = 0.35 (Low-z CGM)</button>
+                            <button type="button" class="preset-btn cosmo-z-preset" data-z="2.0">z = 2.0 (Cosmic Noon)</button>
+                        </div>
+
+                        <div class="cosmo-input-grid">
+                            <div class="cosmo-field">
+                                <label for="cosmo-z">Redshift (z)</label>
+                                <input type="number" id="cosmo-z" value="0.87641" step="0.01" min="0" max="20">
+                            </div>
+                            <div class="cosmo-field">
+                                <label for="cosmo-h0">H<sub>0</sub> (km s<sup>&minus;1</sup> Mpc<sup>&minus;1</sup>)</label>
+                                <input type="number" id="cosmo-h0" value="67.74" step="0.1" min="30" max="100">
+                            </div>
+                            <div class="cosmo-field">
+                                <label for="cosmo-om">&Omega;<sub>m,0</sub> (Matter Density)</label>
+                                <input type="number" id="cosmo-om" value="0.3089" step="0.005" min="0.05" max="1.2">
+                            </div>
+                            <div class="cosmo-field">
+                                <label for="cosmo-ol">&Omega;<sub>&Lambda;,0</sub> (Dark Energy)</label>
+                                <input type="number" id="cosmo-ol" value="0.6911" step="0.005" min="0.0" max="1.2">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 0.5rem;">
+                            <a href="https://github.com/bharadwajsumukha/cosmology-calculator-android/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Download Android APK (GitHub Releases) &nearr;
+                            </a>
+                            <a href="https://github.com/bharadwajsumukha/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                View GitHub Profile &nearr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cosmo-results-col">
+                        <div class="lab-box-header">
+                            <span class="lab-box-title">Computed Observational Quantities</span>
+                            <span class="telemetry-key">Simpson Quadrature (N=400)</span>
+                        </div>
+                        <div class="cosmo-results-grid">
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Age of Universe</span><span>t<sub>univ</sub></span></div>
+                                <div class="cosmo-metric-num" id="res-tuniv">13.80 Gyr</div>
+                            </div>
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Lookback Time</span><span>t<sub>lb</sub>(z)</span></div>
+                                <div class="cosmo-metric-num" id="res-tlb">7.39 Gyr</div>
+                            </div>
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Comoving Distance</span><span>D<sub>C</sub>(z)</span></div>
+                                <div class="cosmo-metric-num" id="res-dc">3055.2 Mpc</div>
+                            </div>
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Angular Diameter Dist.</span><span>D<sub>A</sub>(z)</span></div>
+                                <div class="cosmo-metric-num" id="res-da">1628.2 Mpc</div>
+                            </div>
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Luminosity Distance</span><span>D<sub>L</sub>(z)</span></div>
+                                <div class="cosmo-metric-num" id="res-dl">5732.8 Mpc</div>
+                            </div>
+                            <div class="cosmo-metric-box">
+                                <div class="cosmo-metric-sym"><span>Scale &amp; T<sub>CMB</sub>(z)</span><span>kpc/&Prime; &bull; T(z)</span></div>
+                                <div class="cosmo-metric-num" id="res-scale">7.89 kpc/&Prime; &bull; 5.11 K</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -392,458 +695,408 @@
         </section>
 
         <!-- ===================================================================
-             PUBLICATIONS SECTION (Academic Journal Articles)
+             05 // CURRICULUM VITAE, TECHNICAL STACK & WORKSHOPS (#cv)
              =================================================================== -->
-        <section id="publications" class="section">
+        <section id="cv" class="section section-alt">
             <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Academic Output</div>
-                    <h2 class="section-title">Selected Publications</h2>
-                    <p class="section-description">Peer-reviewed journal articles and submitted manuscripts in observational astrophysics and circumgalactic gas dynamics.</p>
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">05 // Curriculum Vitae</span>
+                        <span class="section-subtag">Academic &amp; Technical Ledger</span>
+                    </div>
+                    <div class="section-heading-col" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h2>Education, Experience &amp; Technical Arsenal</h2>
+                            <p>Complete academic record, spectroscopic modeling stack, and specialized schools.</p>
+                        </div>
+                        <a href="https://bharadwajsumukha.github.io/Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            Download Full CV (PDF) &nearr;
+                        </a>
+                    </div>
                 </div>
 
-                <div class="publications-list">
-                    <!-- Manuscript Under Review -->
-                    <article class="pub-card">
-                        <div class="pub-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="pub-content">
-                            <div class="pub-badges">
-                                <span class="pub-badge badge-warning">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                    <span>Under Review</span>
-                                </span>
-                                <span class="pub-badge badge-neutral">Submitted to ApJ</span>
-                            </div>
-                            <h3 class="pub-title">Warm-hot circumgalactic gas in galaxy pair halos: Ne VIII and O VI absorption toward PKS 0405-123 and HE 0226-4110</h3>
-                            <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
-                            <div class="pub-link-row">
-                                <span class="pub-manuscript-note">Manuscript submitted to The Astrophysical Journal</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Published Article -->
-                    <article class="pub-card">
-                        <div class="pub-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                        </div>
-                        <div class="pub-content">
-                            <div class="pub-badges">
-                                <span class="pub-badge badge-success">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Published</span>
-                                </span>
-                                <span class="pub-badge badge-neutral">ApJ 1008, 155 (2026)</span>
-                            </div>
-                            <h3 class="pub-title">A Partial Lyman Limit Absorber Tracing Cold-Mode Accretion</h3>
-                            <div class="pub-authors"><strong>S. R. Bharadwaj</strong>, et al.</div>
-                            <div class="pub-link-row">
-                                <a href="https://doi.org/10.3847/1538-4357/ae853b" target="_blank" rel="noopener noreferrer" class="pub-link">
-                                    <span>Read paper at IOP Science (DOI: 10.3847/1538-4357/ae853b)</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             CURRICULUM VITAE SECTION (Timeline & Technical Profile)
-             =================================================================== -->
-        <section id="cv" class="section bg-secondary">
-            <div class="container">
-                <div class="cv-header-action">
+                <div class="cv-ledger-grid">
+                    <!-- Column 1: Education -->
                     <div>
-                        <div class="section-label">Academic Profile</div>
-                        <h2 class="section-title">Curriculum Vitae</h2>
-                    </div>
-                    <a href="Sumukha_R_Bharadwaj_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download Full CV (PDF)
-                    </a>
-                </div>
+                        <div class="cv-block-title">Academic Education</div>
+                        <div class="cv-entry-list">
+                            <div class="cv-item">
+                                <div class="cv-item-period">2024 &ndash; PRESENT</div>
+                                <div class="cv-item-heading">Ph.D. in Astronomy and Astrophysics</div>
+                                <div class="cv-item-org"><a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, Thiruvananthapuram</div>
+                                <div class="cv-item-note">Advisor: <a href="https://www.iist.ac.in/people-faculty-profile/anand-narayanan" target="_blank" rel="noopener noreferrer">Dr. Anand Narayanan</a> &bull; Department of Earth and Space Sciences</div>
+                            </div>
 
-                <!-- Education -->
-                <h3 class="cv-subheading">Education</h3>
-                <div class="cv-timeline">
-                    <div class="timeline-entry">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-date">2024 &ndash; PRESENT</div>
-                        <h4 class="timeline-degree">PhD in Astronomy and Astrophysics</h4>
-                        <div class="timeline-institution">Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram</div>
-                        <div class="timeline-detail">Advisor: Dr Anand Narayanan</div>
-                    </div>
+                            <div class="cv-item">
+                                <div class="cv-item-period">2021 &ndash; 2023</div>
+                                <div class="cv-item-heading">M.Sc. in Physics</div>
+                                <div class="cv-item-org"><a href="https://www.sju.edu.in/" target="_blank" rel="noopener noreferrer">St. Joseph&rsquo;s College (Autonomous)</a>, Bengaluru City University</div>
+                                <div class="cv-item-note">Graduated with an aggregate SGPA of 8.25</div>
+                            </div>
 
-                    <div class="timeline-entry">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-date">2021 &ndash; 2023</div>
-                        <h4 class="timeline-degree">MSc Physics</h4>
-                        <div class="timeline-institution">St Joseph's College (Autonomous), Bengaluru City University</div>
-                        <div class="timeline-detail">Graduated with an aggregate SGPA of 8.25</div>
+                            <div class="cv-item">
+                                <div class="cv-item-period">2018 &ndash; 2021</div>
+                                <div class="cv-item-heading">B.Sc. in Physics, Chemistry, Mathematics</div>
+                                <div class="cv-item-org"><a href="https://www.sju.edu.in/" target="_blank" rel="noopener noreferrer">St. Joseph&rsquo;s College (Autonomous)</a>, Bengaluru City University</div>
+                                <div class="cv-item-note">Graduated with an aggregate SGPA of 8.20</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="timeline-entry">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-date">2018 &ndash; 2021</div>
-                        <h4 class="timeline-degree">BSc Physics, Chemistry, Mathematics</h4>
-                        <div class="timeline-institution">St Joseph's College (Autonomous), Bengaluru City University</div>
-                        <div class="timeline-detail">Graduated with an aggregate SGPA of 8.2</div>
-                    </div>
-                </div>
+                    <!-- Column 2: Workshops & Summer Schools (from CV) -->
+                    <div>
+                        <div class="cv-block-title">Workshops &amp; Specialized Schools</div>
+                        <div class="cv-entry-list">
+                            <div class="cv-item">
+                                <div class="cv-item-period">OCT 20 &ndash; 31, 2025</div>
+                                <div class="cv-item-heading">COSPAR JWST&ndash;UVIT Hands-on Workshop</div>
+                                <div class="cv-item-org"><a href="https://christuniversity.in/" target="_blank" rel="noopener noreferrer">Centre of Excellence in Astronomy &amp; Astrophysics, CHRIST University</a>, Bengaluru</div>
+                                <div class="cv-item-note">End-to-end JWST data reduction pipeline (uncalibrated to Level 3) and independent reproduction of published JWST results.</div>
+                            </div>
 
-                <!-- Research Experience -->
-                <h3 class="cv-subheading">Research Experience</h3>
-                <div class="experience-grid">
-                    <div class="experience-card">
-                        <h4 class="experience-title">PhD Research &ndash; Circumgalactic and Intergalactic Medium</h4>
-                        <div class="experience-institution"><a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a>, Thiruvananthapuram</div>
-                        <p class="experience-description">Spectroscopic study of the Circumgalactic Medium (CGM) and Intergalactic Medium (IGM) using quasar absorption line systems, combining <em>HST</em>&ndash;COS spectroscopy with <em>VLT</em>&ndash;MUSE observations to investigate galaxy&ndash;absorber connections and the physical and kinematic properties of gas around galaxies, including Ne VIII, O VI, and Mg II absorbers at low redshift.</p>
-                    </div>
+                            <div class="cv-item">
+                                <div class="cv-item-period">JAN 2025</div>
+                                <div class="cv-item-heading">Scientific Grant Proposal Writing Workshop</div>
+                                <div class="cv-item-org"><a href="https://www.iisertvm.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Science Education and Research (IISER)</a>, Thiruvananthapuram</div>
+                                <div class="cv-item-note">Training in structuring and authoring competitive astrophysics research grant proposals.</div>
+                            </div>
 
-                    <div class="experience-card">
-                        <h4 class="experience-title">Master's Dissertation Research Project</h4>
-                        <div class="experience-institution"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></div>
-                        <p class="experience-description"><strong>Topic:</strong> Transiting Exoplanetary Atmospheres &ndash; Spectroscopic Reduction and Observational Techniques<br>
-                        Performed end-to-end spectroscopic reduction of ground-based observations of two hot Jupiter exoplanets (HAT-P1-b and WASP-33b) using IRAF, including bias subtraction, flat-field correction, aperture extraction, and wavelength calibration, followed by transit light curve fitting and MCMC parameter estimation using pylightcurve.</p>
-                    </div>
+                            <div class="cv-item">
+                                <div class="cv-item-period">DEC 10 &ndash; 15, 2024</div>
+                                <div class="cv-item-heading">Manipal Astrostatistics School</div>
+                                <div class="cv-item-org"><a href="https://www.manipal.edu/" target="_blank" rel="noopener noreferrer">Manipal Academy of Higher Education (MAHE)</a></div>
+                                <div class="cv-item-note">Bayesian model fitting, uncertainty estimation, and machine learning methods for astrophysical datasets.</div>
+                            </div>
 
-                    <div class="experience-card">
-                        <h4 class="experience-title">Project Assistant &ndash; COSMOS Outreach Program</h4>
-                        <div class="experience-institution"><a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA)</a></div>
-                        <p class="experience-description">Worked as a Project Assistant in the COSMOS outreach program for about six months, participating in astronomy outreach activities and educational programs.</p>
+                            <div class="cv-item">
+                                <div class="cv-item-period">2023</div>
+                                <div class="cv-item-heading">ISRO Aditya-L1 Solar Astronomy Workshop</div>
+                                <div class="cv-item-org"><a href="https://www.isro.gov.in/Aditya_L1.html" target="_blank" rel="noopener noreferrer">ISRO</a> &amp; <a href="https://www.sju.edu.in/" target="_blank" rel="noopener noreferrer">St. Joseph&rsquo;s University</a>, Bengaluru</div>
+                                <div class="cv-item-note">Studied scientific payloads aboard Aditya-L1 and served on the workshop organizing committee.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical Skills Categorized -->
-                <h3 class="cv-subheading">Technical &amp; Computational Skills</h3>
-                <div class="skills-category-grid">
-                    <div class="skill-category-card">
-                        <div class="skill-cat-name">Programming</div>
-                        <div class="skill-cat-title">Python</div>
-                        <div class="skill-cat-items">Scientific computing, spectral analysis, data reduction, and Markov chain Monte Carlo modeling</div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-cat-name">Astrophysics Tools</div>
-                        <div class="skill-cat-title">Specialised Software</div>
-                        <div class="skill-cat-items">GalPaK3D, Prospector, BAGPIPES, Cloudy photoionization modeling, emcee</div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-cat-name">Spectroscopy</div>
-                        <div class="skill-cat-title">IRAF / PyRAF</div>
-                        <div class="skill-cat-items">Astronomical spectral reduction, aperture extraction, and wavelength calibration</div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-cat-name">Scientific Typesetting</div>
-                        <div class="skill-cat-title">LaTeX</div>
-                        <div class="skill-cat-items">Scientific manuscript and technical document preparation</div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-cat-name">Mathematics</div>
-                        <div class="skill-cat-title">Maxima</div>
-                        <div class="skill-cat-items">Symbolic algebra and mathematical computation</div>
-                    </div>
-                </div>
+                <!-- Computational & Spectroscopic Arsenal Table -->
+                <div class="cv-block-title">Computational &amp; Astrophysical Modeling Stack</div>
+                <table class="tech-stack-table">
+                    <tbody>
+                        <tr>
+                            <th>Ionization &amp; Halo Modeling</th>
+                            <td><strong>Cloudy</strong> (photoionization &amp; collisional ionization equilibrium modeling), <strong>GalPaK3D</strong> (3D galaxy disk morpho-kinematics from IFU cubes)</td>
+                        </tr>
+                        <tr>
+                            <th>SED Fitting &amp; Inference</th>
+                            <td><strong>Prospector</strong> &amp; <strong>BAGPIPES</strong> (stellar population synthesis, SFHs, stellar masses), <strong>emcee</strong> (Affine-invariant MCMC ensemble sampler), <strong>pylightcurve</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Observational Pipelines</th>
+                            <td><strong>HST/COS</strong> (FUV absorption spectroscopy), <strong>VLT/MUSE</strong> (3D optical integral field spectroscopy), <strong>JWST Pipeline</strong> (Level 1&ndash;3), <strong>IRAF / PyRAF</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Programming &amp; Symbolic Math</th>
+                            <td><strong>Python</strong> (NumPy, SciPy, Astropy, Matplotlib, spectral Voigt profile analysis), <strong>Flutter / Dart</strong> (scientific mobile tools), <strong>Maxima</strong> (symbolic algebra), <strong>LaTeX</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- ===================================================================
-             OUTREACH & TEACHING SECTION
+             06 // OUTREACH & PEDAGOGY (#outreach)
              =================================================================== -->
         <section id="outreach" class="section">
             <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Engagement &amp; Pedagogy</div>
-                    <h2 class="section-title">Outreach &amp; Teaching</h2>
-                    <p class="section-description">Dedicated to introducing public audiences to observational astronomy and mentoring students in departmental instrumentation.</p>
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">06 // Public Engagement</span>
+                        <span class="section-subtag">COSMOS IIA &bull; IIST Teaching</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Astronomy Outreach &amp; Observational Pedagogy</h2>
+                        <p>
+                            Bringing observational astronomy to students and public audiences through telescope sky-watching sessions and university instrumentation labs.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="outreach-grid">
-                    <div class="outreach-card">
-                        <div class="outreach-icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="m4.93 4.93 4.24 4.24"></path>
-                                <path d="m14.83 9.17 4.24-4.24"></path>
-                                <path d="m14.83 14.83 4.24 4.24"></path>
-                                <path d="m9.17 14.83-4.24 4.24"></path>
-                                <circle cx="12" cy="12" r="4"></circle>
-                            </svg>
+                <div class="dual-editorial-grid">
+                    <article class="editorial-panel">
+                        <div class="pillar-kicker" style="margin-bottom: 0.45rem;">
+                            <span>The COSMOS Project &bull; Indian Institute of Astrophysics (IIA)</span>
                         </div>
-                        <h3 class="outreach-title">Astronomy Outreach and Night Sky Sessions</h3>
-                        <p class="outreach-desc">I participate in astronomy outreach activities where I conduct night sky observation sessions for students and the public using outreach telescopes. These sessions introduce participants to observational astronomy and basic techniques for observing celestial objects such as the Moon, planets, and bright nebulae.</p>
-                    </div>
+                        <h3>Project Assistant &amp; Public Night-Sky Sessions</h3>
+                        <p class="pillar-desc">
+                            Contributed to public astronomy outreach under Dr. Niruj Mohan Ramanujam at the <a href="https://www.iiap.res.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Astrophysics (IIA), Bengaluru</a>, conducting public lectures, telescope observation sessions of lunar, planetary, and nebular targets, and educational workshops for school and college students.
+                        </p>
+                    </article>
 
-                    <div class="outreach-card">
-                        <div class="outreach-icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
+                    <article class="editorial-panel">
+                        <div class="pillar-kicker" style="margin-bottom: 0.45rem;">
+                            <span>Department of Earth &amp; Space Sciences &bull; IIST</span>
                         </div>
-                        <h3 class="outreach-title">Teaching Assistant &ndash; Observational Astronomy</h3>
-                        <p class="outreach-desc">Assist MSc students in learning observational astronomy techniques, including acquiring astronomical images using the departmental telescope and understanding basic observational procedures.</p>
-                    </div>
+                        <h3>Teaching Assistant &mdash; Observational Astronomy</h3>
+                        <p class="pillar-desc">
+                            Mentor M.Sc. Astronomy and Astrophysics students at <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">IIST</a> in hands-on observational astronomy techniques, including CCD imaging acquisition with the departmental telescope, calibration frames, and observational data reduction procedures.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================
-             PERSONAL INTERESTS SECTION (Beyond the Observatory)
-             =================================================================== -->
-        <section id="personal" class="section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Beyond Research</div>
-                    <h2 class="section-title">Personal Interests</h2>
-                    <p class="section-description">Outside academic research, I have a strong passion for acting in cinema and television productions, as well as Hindustani Classical Music.</p>
-                </div>
-
-                <div class="productions-grid">
-                    <a href="https://youtu.be/d0qP-eOghX8?si=YRT0gtvgRGENAf5N" target="_blank" rel="noopener noreferrer" class="production-card">
-                        <div class="production-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4z"></path>
-                                <path d="M4 11V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4H4z"></path>
-                                <path d="m4 7 4 4"></path>
-                                <path d="m10 5 4 4"></path>
-                                <path d="m16 5 4 4"></path>
-                            </svg>
-                        </div>
-                        <div class="production-info">
-                            <div class="production-title">
-                                <span>Shubhamangala</span>
-                                <span class="production-link-arrow">&nearr;</span>
-                            </div>
-                            <div class="production-desc">Feature Film &bull; Acted in this film</div>
-                        </div>
-                    </a>
-
-                    <a href="https://youtu.be/CH9WnIuNPps?si=pNXSjPxv_q8OIVsM" target="_blank" rel="noopener noreferrer" class="production-card">
-                        <div class="production-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4z"></path>
-                                <path d="M4 11V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4H4z"></path>
-                                <path d="m4 7 4 4"></path>
-                                <path d="m10 5 4 4"></path>
-                                <path d="m16 5 4 4"></path>
-                            </svg>
-                        </div>
-                        <div class="production-info">
-                            <div class="production-title">
-                                <span>Kurmavatara</span>
-                                <span class="production-link-arrow">&nearr;</span>
-                            </div>
-                            <div class="production-desc">Feature Film &bull; National Award-Winning Film</div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.hotstar.com/in/movies/alamelamma/1971004866?search_query=operation+alamelamma" target="_blank" rel="noopener noreferrer" class="production-card">
-                        <div class="production-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4z"></path>
-                                <path d="M4 11V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4H4z"></path>
-                                <path d="m4 7 4 4"></path>
-                                <path d="m10 5 4 4"></path>
-                                <path d="m16 5 4 4"></path>
-                            </svg>
-                        </div>
-                        <div class="production-info">
-                            <div class="production-title">
-                                <span>Operation Alamelamma</span>
-                                <span class="production-link-arrow">&nearr;</span>
-                            </div>
-                            <div class="production-desc">Feature Film &bull; Acted in this film</div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.hotstar.com/in/shows/guru-raghavendra-vaibhava/1271275968?search_query=raghavendra+vaibhava" target="_blank" rel="noopener noreferrer" class="production-card">
-                        <div class="production-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-                                <polyline points="17 2 12 7 7 2"></polyline>
-                            </svg>
-                        </div>
-                        <div class="production-info">
-                            <div class="production-title">
-                                <span>Guru Raghavendra Vaibhava</span>
-                                <span class="production-link-arrow">&nearr;</span>
-                            </div>
-                            <div class="production-desc">Television Serial &bull; Episodes 491, 492, 493+</div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="music-feature-card">
-                    <div class="music-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M9 18V5l12-2v13"></path>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <circle cx="18" cy="16" r="3"></circle>
-                        </svg>
-                    </div>
-                    <div class="music-info">
-                        <h4 class="music-title">Hindustani Classical Music</h4>
-                        <p class="music-desc">Completed 'Praveshika Poorna' in Hindustani Classical singing with a continuing passion for classical vocal performance and musical theory.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             CONTACT SECTION (Academic & Research Engagement)
-             =================================================================== -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header section-header--center">
-                    <div class="section-label section-label--center">Get In Touch</div>
-                    <h2 class="section-title">Contact &amp; Collaboration</h2>
-                    <p class="section-description section-description--center">Interested in research collaboration, academic discussions, or outreach opportunities? Feel free to reach out.</p>
-                </div>
-
-                <div class="contact-info-grid">
-                    <div class="contact-cards-column">
-                        <a href="mailto:bharadwaj.sumukha@gmail.com" class="contact-detail-card">
-                            <div class="contact-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <div class="contact-label">Primary Email</div>
-                                <div class="contact-value">bharadwaj.sumukha@gmail.com</div>
-                            </div>
-                        </a>
-
-                        <a href="mailto:sumukharb.24@res.iist.ac.in" class="contact-detail-card">
-                            <div class="contact-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <div class="contact-label">Institutional Email</div>
-                                <div class="contact-value">sumukharb.24@res.iist.ac.in</div>
-                            </div>
-                        </a>
-
-                        <div class="contact-detail-card">
-                            <div class="contact-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                                    <path d="M9 22v-4h6v4"></path>
-                                    <path d="M8 6h.01"></path>
-                                    <path d="M16 6h.01"></path>
-                                    <path d="M12 6h.01"></path>
-                                    <path d="M12 10h.01"></path>
-                                    <path d="M12 14h.01"></path>
-                                    <path d="M16 10h.01"></path>
-                                    <path d="M16 14h.01"></path>
-                                    <path d="M8 10h.01"></path>
-                                    <path d="M8 14h.01"></path>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <div class="contact-label">Institution</div>
-                                <div class="contact-value">Indian Institute of Space Science and Technology (IIST)<br><span class="contact-subtext">Thiruvananthapuram, Kerala, India</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Profiles Column -->
-                    <div class="contact-social-column">
-                        <div class="social-column-title">Academic &amp; Social Profiles</div>
-                        <div class="social-links-grid">
-                            <a href="https://github.com/bharadwajsumukha/" target="_blank" rel="noopener noreferrer" class="social-button">
-                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                </svg>
-                                <span>GitHub</span>
-                            </a>
-
-                            <a href="https://in.linkedin.com/in/sumukha-bharadwaj-520a81232" target="_blank" rel="noopener noreferrer" class="social-button">
-                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                                </svg>
-                                <span>LinkedIn</span>
-                            </a>
-
-                            <a href="https://x.com/sumukharbhar15" target="_blank" rel="noopener noreferrer" class="social-button">
-                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                </svg>
-                                <span>X (Twitter)</span>
-                            </a>
-
-                            <a href="https://www.instagram.com/bharadwaj.sumukha/" target="_blank" rel="noopener noreferrer" class="social-button">
-                                <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             GALLERY SECTION (Telescope & Outreach Horizontal Track)
+             TELESCOPE & OUTREACH PHOTO GALLERY (#gallery)
              =================================================================== -->
         <section id="gallery" class="gallery-section">
             <div class="container">
-                <div class="section-label section-label--center">Observational Astronomy</div>
-                <h2 class="section-title">Telescope &amp; Outreach Sessions</h2>
-                <p class="section-description">A photographic record of night sky observation sessions and astronomy outreach programs.</p>
+                <div class="section-index" style="text-align: center; margin-bottom: 0.4rem;">FIELD LOG // OBSERVATIONAL ASTRONOMY SESSIONS</div>
+                <h2 style="font-family: var(--font-serif); font-size: clamp(1.7rem, 2.8vw, 2.3rem); color: #f2f5fa; text-align: center; font-weight: 500;">
+                    Telescope &amp; Night-Sky Outreach Archive
+                </h2>
+                <p style="text-align: center; color: #7e90ae; max-width: 600px; margin: 0.4rem auto 0 auto; font-size: 0.92rem;">
+                    Click any frame to inspect in fullscreen pan-and-zoom lightbox.
+                </p>
             </div>
 
             <div class="gallery-wrapper">
                 <button id="gallery-prev" class="gallery-nav prev" aria-label="Previous images">&lsaquo;</button>
                 <div class="gallery-container">
                     <div class="gallery-track" id="gallery-track">
-                        <!-- Dynamic images injected here via script.js -->
+                        <img src="assets/images/IMG-20250130-WA0025.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250130-WA0025.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0011.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0011.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0014.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0014.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0015.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0015.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0017.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0017.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0018.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0018.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0019.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0019.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0020.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0020.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0025.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0025.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0027.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0027.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0030.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0030.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0031.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0031.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0040.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0040.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0053.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0053.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250912-WA0029.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250912-WA0029.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250912-WA0033.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250912-WA0033.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241120_124737301.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241120_124737301.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113530581.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113530581.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113543074.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113543074.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113822444.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113822444.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114110680.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114110680.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114131408.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114131408.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114142584.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114142584.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114945174.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114945174.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250125_213354332.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250125_213354332.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184537284.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184537284.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184541440.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184541440.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184551960.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184551960.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_202432427.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_202432427.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250208_184507237.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250208_184507237.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250209_192124657.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250209_192124657.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250222_223424915.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250222_223424915.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250222_223430472.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250222_223430472.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250130-WA0025.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250130-WA0025.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0011.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0011.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0014.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0014.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0015.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0015.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0017.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0017.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0018.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0018.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0019.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0019.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0020.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0020.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0025.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0025.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0027.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0027.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0030.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0030.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0031.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0031.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0040.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0040.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250225-WA0053.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250225-WA0053.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250912-WA0029.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250912-WA0029.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG-20250912-WA0033.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG-20250912-WA0033.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241120_124737301.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241120_124737301.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113530581.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113530581.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113543074.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113543074.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_113822444.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_113822444.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114110680.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114110680.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114131408.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114131408.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114142584.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114142584.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20241217_114945174.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20241217_114945174.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250125_213354332.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250125_213354332.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184537284.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184537284.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184541440.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184541440.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_184551960.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_184551960.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250127_202432427.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250127_202432427.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250208_184507237.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250208_184507237.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250209_192124657.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250209_192124657.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250222_223424915.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250222_223424915.jpg)" class="gallery-img" loading="lazy">
+                        <img src="assets/images/IMG_20250222_223430472.jpg" alt="Telescope Outreach &amp; Night Sky Session (IMG_20250222_223430472.jpg)" class="gallery-img" loading="lazy">
                     </div>
                 </div>
                 <button id="gallery-next" class="gallery-nav next" aria-label="Next images">&rsaquo;</button>
             </div>
         </section>
+
+        <!-- ===================================================================
+             07 // BEYOND THE OBSERVATORY — CINEMA & CLASSICAL MUSIC (#personal)
+             =================================================================== -->
+        <section id="personal" class="section section-alt">
+            <div class="container">
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">07 // Beyond the Observatory</span>
+                        <span class="section-subtag">Cinema &bull; Hindustani Vocal</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Cinema, Television &amp; Hindustani Classical Music</h2>
+                        <p>
+                            Alongside astrophysics research, I have acted in acclaimed Kannada feature films—including the National Award-winning <em>Kurmavatara</em>—and television productions, and trained formally in Hindustani Classical vocal music.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="film-list">
+                    <a href="https://youtu.be/CH9WnIuNPps?si=pNXSjPxv_q8OIVsM" target="_blank" rel="noopener noreferrer" class="film-card">
+                        <div>
+                            <div class="film-title">Kurmavatara</div>
+                            <div class="film-meta">Feature Film &bull; National Film Award Winner</div>
+                        </div>
+                        <span class="telemetry-val">Watch &nearr;</span>
+                    </a>
+
+                    <a href="https://youtu.be/d0qP-eOghX8?si=YRT0gtvgRGENAf5N" target="_blank" rel="noopener noreferrer" class="film-card">
+                        <div>
+                            <div class="film-title">Shubhamangala</div>
+                            <div class="film-meta">Feature Film &bull; Kannada Cinema</div>
+                        </div>
+                        <span class="telemetry-val">Watch &nearr;</span>
+                    </a>
+
+                    <a href="https://www.hotstar.com/in/movies/alamelamma/1971004866?search_query=operation+alamelamma" target="_blank" rel="noopener noreferrer" class="film-card">
+                        <div>
+                            <div class="film-title">Operation Alamelamma</div>
+                            <div class="film-meta">Feature Film &bull; Streaming on Disney+ Hotstar</div>
+                        </div>
+                        <span class="telemetry-val">Watch &nearr;</span>
+                    </a>
+
+                    <a href="https://www.hotstar.com/in/shows/guru-raghavendra-vaibhava/1271275968?search_query=raghavendra+vaibhava" target="_blank" rel="noopener noreferrer" class="film-card">
+                        <div>
+                            <div class="film-title">Guru Raghavendra Vaibhava</div>
+                            <div class="film-meta">Television Serial &bull; Episodes 491, 492, 493+</div>
+                        </div>
+                        <span class="telemetry-val">Watch &nearr;</span>
+                    </a>
+                </div>
+
+                <div class="editorial-panel" style="border-left: 3px solid var(--accent-warm);">
+                    <div class="pillar-kicker" style="color: var(--accent-warm); margin-bottom: 0.3rem;">
+                        <span>Classical Vocal Training // Praveshika Poorna</span>
+                    </div>
+                    <h3>Hindustani Classical Music</h3>
+                    <p class="pillar-desc">
+                        Completed <em>Praveshika Poorna</em> in Hindustani Classical vocal music, with a continuing dedication to classical raga performance and musical theory.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             08 // CONTACT & COLLABORATION (#contact)
+             =================================================================== -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header-row">
+                    <div class="section-index-col">
+                        <span class="section-index">08 // Correspondence</span>
+                        <span class="section-subtag">IIST Thiruvananthapuram</span>
+                    </div>
+                    <div class="section-heading-col">
+                        <h2>Contact &amp; Research Collaboration</h2>
+                        <p>
+                            Open to discussions on quasar absorption spectroscopy, CGM/IGM galaxy surveys, cosmological simulation comparisons, and astronomy outreach.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div>
+                        <div class="contact-row-card">
+                            <div>
+                                <div class="aperture-meta-label">Primary Email</div>
+                                <a href="mailto:bharadwaj.sumukha@gmail.com" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-primary);">bharadwaj.sumukha@gmail.com</a>
+                            </div>
+                            <button type="button" class="hud-btn copy-email-btn" data-email="bharadwaj.sumukha@gmail.com">Copy Email</button>
+                        </div>
+
+                        <div class="contact-row-card">
+                            <div>
+                                <div class="aperture-meta-label">Institutional Email (IIST)</div>
+                                <a href="mailto:sumukharb.24@res.iist.ac.in" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-primary);">sumukharb.24@res.iist.ac.in</a>
+                            </div>
+                            <button type="button" class="hud-btn copy-email-btn" data-email="sumukharb.24@res.iist.ac.in">Copy Email</button>
+                        </div>
+
+                        <div class="contact-row-card">
+                            <div>
+                                <div class="aperture-meta-label">Departmental Address</div>
+                                <div style="font-size: 0.88rem; color: var(--text-secondary);">
+                                    <a href="https://www.iist.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Space Science and Technology (IIST)</a><br>
+                                    Department of Earth and Space Sciences, Valiamala, Thiruvananthapuram, Kerala 695547, India
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="cv-block-title">Academic &amp; Social Profiles</div>
+                        <div class="social-matrix">
+                            <a href="https://orcid.org/0009-0003-1664-3369" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>ORCID</span>
+                                <span>&nearr;</span>
+                            </a>
+                            <a href="https://arxiv.org/abs/2608.09418" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>arXiv Preprints</span>
+                                <span>&nearr;</span>
+                            </a>
+                            <a href="https://github.com/bharadwajsumukha/" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>GitHub</span>
+                                <span>&nearr;</span>
+                            </a>
+                            <a href="https://in.linkedin.com/in/sumukha-bharadwaj-520a81232" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>LinkedIn</span>
+                                <span>&nearr;</span>
+                            </a>
+                            <a href="https://x.com/sumukharbhar15" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>X (Twitter)</span>
+                                <span>&nearr;</span>
+                            </a>
+                            <a href="https://www.instagram.com/bharadwaj.sumukha/" target="_blank" rel="noopener noreferrer" class="social-cell">
+                                <span>Instagram</span>
+                                <span>&nearr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Fullscreen Lightbox -->
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image view">
-        <span class="lightbox-close" title="Close (Esc)">&times;</span>
-        <button id="lightbox-prev" class="lightbox-nav prev" aria-label="Previous image">&lsaquo;</button>
-        <img class="lightbox-content" id="lightbox-img" alt="Enlarged telescope gallery observation view">
-        <button id="lightbox-next" class="lightbox-nav next" aria-label="Next image">&rsaquo;</button>
+    <!-- Fullscreen Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged Gallery Observation View">
+        <button type="button" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <button type="button" id="lightbox-prev" class="lightbox-nav prev" aria-label="Previous Image">&lsaquo;</button>
+        <img class="lightbox-content" id="lightbox-img" src="assets/images/IMG-20250130-WA0025.jpg" alt="Enlarged telescope outreach view">
+        <button type="button" id="lightbox-next" class="lightbox-nav next" aria-label="Next Image">&rsaquo;</button>
     </div>
 
-    <!-- Minimal Elegant Footer -->
+    <!-- In-Page Toast Notification -->
+    <div id="toast-banner" class="toast-banner" role="status" aria-live="polite"></div>
+
     <footer>
-        <div class="container footer-content">
-            <p>&copy; <span id="current-year"></span> Sumukha R Bharadwaj &bull; All rights reserved.</p>
-            <p class="footer-academic-note">Astrophysics Research Scholar &bull; Department of Earth &amp; Space Sciences &bull; IIST Thiruvananthapuram</p>
+        <div class="container footer-inner">
+            <div>&copy; <span id="current-year">2026</span> Sumukha R Bharadwaj &bull; PhD Scholar, IIST Thiruvananthapuram</div>
+            <div>
+                Simulation Credits: <a href="https://www.tng-project.org/media/" target="_blank" rel="noopener noreferrer">IllustrisTNG Collaboration (Zinger et al. 2020; Nelson et al. 2019, 2020)</a> &amp; <a href="https://astro.dur.ac.uk/ICC/Eagle/" target="_blank" rel="noopener noreferrer">The EAGLE Project (Schaye et al. 2015)</a>
+            </div>
         </div>
     </footer>
 
