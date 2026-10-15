@@ -378,8 +378,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------------------
-    // 4. SIMULATION THEATRE TABS & TNG100 VIDEO CONTROLS + 8-PANEL INSPECTOR
+    // 4. SIMULATION THEATRE: ISOLATED VIDEO SPEED & PLAYBACK MANAGEMENT
     // -------------------------------------------------------------------------
+    // Strictly isolated playback speeds for each video target (independent defaults: 1.0)
+    const videoSpeedRegistry = {
+        'tng-main-video': 1.0,
+        'tng50-gal-video': 1.0,
+        'eagle-videos': 1.0
+    };
+
+    function applyPlaybackRate(vid, rate) {
+        if (!vid) return;
+        vid.defaultPlaybackRate = rate;
+        vid.playbackRate = rate;
+    }
+
+    function getVideoTargetKey(vid) {
+        if (!vid) return null;
+        if (vid.id === 'tng-main-video') return 'tng-main-video';
+        if (vid.id === 'tng50-gal-video') return 'tng50-gal-video';
+        if (vid.classList.contains('eagle-video')) return 'eagle-videos';
+        return null;
+    }
+
+    // Attach strict lifecycle protection to every simulation video on the page
+    const allSimVideos = document.querySelectorAll('video');
+    allSimVideos.forEach(vid => {
+        const key = getVideoTargetKey(vid);
+        if (!key) return;
+
+        // Initialize immediately
+        applyPlaybackRate(vid, videoSpeedRegistry[key] || 1.0);
+
+        // Enforce on every lifecycle event so browsers never inherit speeds across elements
+        ['loadstart', 'loadedmetadata', 'canplay', 'play', 'playing'].forEach(evtName => {
+            vid.addEventListener(evtName, () => {
+                const targetRate = videoSpeedRegistry[key] || 1.0;
+                if (vid.playbackRate !== targetRate) {
+                    applyPlaybackRate(vid, targetRate);
+                }
+            });
+        });
+
+        // Guard against cross-media browser rate leaks
+        vid.addEventListener('ratechange', () => {
+            const targetRate = videoSpeedRegistry[key] || 1.0;
+            if (Math.abs(vid.playbackRate - targetRate) > 0.01) {
+                applyPlaybackRate(vid, targetRate);
+            }
+        });
+    });
+
     const simTabBtns = document.querySelectorAll('.sim-tab-btn');
     const simPanels = document.querySelectorAll('.sim-viewport-panel');
 
@@ -387,7 +436,24 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const target = btn.getAttribute('data-sim-tab');
             simTabBtns.forEach(b => b.classList.toggle('active', b === btn));
-            simPanels.forEach(p => p.classList.toggle('active', p.id === target));
+            simPanels.forEach(p => {
+                const isTarget = (p.id === target);
+                p.classList.toggle('active', isTarget);
+                if (!isTarget) {
+                    // Pause all videos in non-active panels to prevent CPU/compositor clock cross-leak
+                    p.querySelectorAll('video').forEach(v => {
+                        try { v.pause(); } catch (_) {}
+                    });
+                } else {
+                    // Re-assert correct isolated speed on videos in the newly active panel
+                    p.querySelectorAll('video').forEach(v => {
+                        const k = getVideoTargetKey(v);
+                        if (k && videoSpeedRegistry[k]) {
+                            applyPlaybackRate(v, videoSpeedRegistry[k]);
+                        }
+                    });
+                }
+            });
             if (target === 'viewport-sightline') {
                 drawSightlineLab();
             }
@@ -523,9 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const vid = slide.querySelector('video');
                 if (vid) {
                     if (isActive) {
-                        if (window.eagleCurrentSpeed) {
-                            vid.playbackRate = window.eagleCurrentSpeed;
-                        }
+                        applyPlaybackRate(vid, videoSpeedRegistry['eagle-videos'] || 1.0);
                         vid.play().catch(() => {});
                     } else {
                         vid.pause();
@@ -614,17 +678,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const speed = parseFloat(item.getAttribute('data-speed'));
                 const speedText = item.textContent.trim();
 
-                // Apply speed to appropriate video(s)
+                // 1. Update isolated registry for this specific targetKey only
+                if (targetKey in videoSpeedRegistry) {
+                    videoSpeedRegistry[targetKey] = speed;
+                }
+
+                // 2. Apply ONLY to videos matching this targetKey
                 if (targetKey === 'tng-main-video') {
                     const vid = document.getElementById('tng-main-video');
-                    if (vid) vid.playbackRate = speed;
+                    applyPlaybackRate(vid, speed);
                 } else if (targetKey === 'tng50-gal-video') {
                     const vid = document.getElementById('tng50-gal-video');
-                    if (vid) vid.playbackRate = speed;
+                    applyPlaybackRate(vid, speed);
                 } else if (targetKey === 'eagle-videos') {
-                    window.eagleCurrentSpeed = speed;
                     document.querySelectorAll('.eagle-video').forEach(v => {
-                        v.playbackRate = speed;
+                        applyPlaybackRate(v, speed);
                     });
                 }
 
