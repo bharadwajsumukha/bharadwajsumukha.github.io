@@ -485,6 +485,97 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -------------------------------------------------------------------------
+    // 4b. VIEWPORT 3 — EAGLE Simulation Evolution Carousel (Rotation, Gas, Stars, DM)
+    // -------------------------------------------------------------------------
+    const eagleCard = document.getElementById('eagle-sim-card');
+    if (eagleCard) {
+        const slides = eagleCard.querySelectorAll('.eagle-slide');
+        const pills = eagleCard.querySelectorAll('.eagle-pill');
+        const prevBtn = document.getElementById('eagle-prev-btn');
+        const nextBtn = document.getElementById('eagle-next-btn');
+        const badgeEl = document.getElementById('eagle-badge');
+        const titleEl = document.getElementById('eagle-title');
+        const descEl = document.getElementById('eagle-desc');
+
+        const eagleViews = [
+            {
+                badge: 'EAGLE // ROTATION OVERVIEW',
+                title: 'Time Evolution in EAGLE: Rotation & Assembly',
+                desc: 'Multi-angle projection of galaxy time-evolution in the EAGLE 100 cMpc simulation suite, illustrating how angular momentum and filamentary accretion govern galactic disk morphology.'
+            },
+            {
+                badge: 'EAGLE // GAS EVOLUTION',
+                title: 'EAGLE Time Evolution: Diffuse & Cool Gas',
+                desc: 'Tracks the cosmic evolution of the gas component: cold-mode filamentary inflows feed galaxy disks, while supernovae and AGN feedback drive high-velocity shocks into the surrounding circumgalactic medium.'
+            },
+            {
+                badge: 'EAGLE // STARS EVOLUTION',
+                title: 'EAGLE Time Evolution: Stellar Assembly',
+                desc: 'Visualizes hierarchical stellar assembly over 13.8 billion years: high-redshift starbursts condense in dark matter overdensities, followed by major/minor mergers and modern disk settling.'
+            },
+            {
+                badge: 'EAGLE // DM HALO EVOLUTION',
+                title: 'EAGLE Time Evolution: Dark Matter Halo Assembly',
+                desc: 'Traces the underlying gravitational skeleton of the cosmic web: dissipationless dark matter halo growth, subhalo accretion, and tidal stripping that define the potential wells hosting cosmic baryons.'
+            }
+        ];
+
+        let currentEagleIdx = 0;
+
+        function setEagleSlide(idx) {
+            currentEagleIdx = (idx + slides.length) % slides.length;
+
+            slides.forEach((slide, i) => {
+                const isActive = (i === currentEagleIdx);
+                slide.classList.toggle('active', isActive);
+                const vid = slide.querySelector('video');
+                if (vid) {
+                    if (isActive) {
+                        vid.play().catch(() => {});
+                    } else {
+                        vid.pause();
+                    }
+                }
+            });
+
+            pills.forEach((pill, i) => {
+                const isSelected = (i === currentEagleIdx);
+                pill.classList.toggle('active', isSelected);
+                pill.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+            });
+
+            if (eagleViews[currentEagleIdx]) {
+                if (badgeEl) badgeEl.textContent = eagleViews[currentEagleIdx].badge;
+                if (titleEl) titleEl.textContent = eagleViews[currentEagleIdx].title;
+                if (descEl) descEl.textContent = eagleViews[currentEagleIdx].desc;
+            }
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                setEagleSlide(currentEagleIdx - 1);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                setEagleSlide(currentEagleIdx + 1);
+            });
+        }
+
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                const targetIdx = parseInt(pill.getAttribute('data-slide-target'), 10);
+                if (!isNaN(targetIdx)) {
+                    setEagleSlide(targetIdx);
+                }
+            });
+        });
+    }
+
+    // -------------------------------------------------------------------------
     // 5. VIEWPORT 2 — Interactive Quasar Sightline & HST/COS Voigt Spectrometer
     // -------------------------------------------------------------------------
     const haloCanvas = document.getElementById('halo-sightline-canvas');

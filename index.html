@@ -400,18 +400,63 @@
                                 </div>
                             </article>
 
-                            <article class="sim-atlas-card">
-                                <div class="sim-atlas-img-wrap">
-                                    <img src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/extra_pics/rotation.png" alt="The EAGLE Cosmological Hydrodynamical Simulation Suite">
-                                    <span class="sim-atlas-badge">EAGLE // HYDRODYNAMICAL SUITE</span>
+                            <article class="sim-atlas-card" id="eagle-sim-card">
+                                <div class="sim-atlas-img-wrap eagle-slider-wrap">
+                                    <!-- Slide 0: Rotation Main Image -->
+                                    <div class="eagle-slide active" data-slide="0">
+                                        <img src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/extra_pics/rotation.png" alt="Time Evolution &amp; Rotation in EAGLE">
+                                    </div>
+
+                                    <!-- Slide 1: Gas Evolution Video -->
+                                    <div class="eagle-slide" data-slide="1">
+                                        <video class="eagle-video" loop muted playsinline controls preload="metadata">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/GAS_EVO.webm" type="video/webm">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/GAS_EVO.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+
+                                    <!-- Slide 2: Stars Evolution Video -->
+                                    <div class="eagle-slide" data-slide="2">
+                                        <video class="eagle-video" loop muted playsinline controls preload="metadata">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/STARS_EVO.webm" type="video/webm">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/STARS_EVO.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+
+                                    <!-- Slide 3: DM Halo Evolution Video -->
+                                    <div class="eagle-slide" data-slide="3">
+                                        <video class="eagle-video" loop muted playsinline controls preload="metadata">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/DM_EVO.webm" type="video/webm">
+                                            <source src="https://astro.dur.ac.uk/ICC/Eagle/Highlights/eagle_extra_vids/DM_EVO.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+
+                                    <!-- Navigation Chevrons -->
+                                    <button type="button" class="eagle-arrow eagle-arrow-prev" id="eagle-prev-btn" aria-label="Previous EAGLE View">&#x2039;</button>
+                                    <button type="button" class="eagle-arrow eagle-arrow-next" id="eagle-next-btn" aria-label="Next EAGLE View">&#x203A;</button>
+
+                                    <!-- Dynamic Badge -->
+                                    <span class="sim-atlas-badge" id="eagle-badge">EAGLE // ROTATION OVERVIEW</span>
                                 </div>
+
+                                <!-- Component Views Toolbar -->
+                                <div class="eagle-pill-bar" role="tablist" aria-label="EAGLE Component Views">
+                                    <button type="button" class="eagle-pill active" data-slide-target="0" role="tab" aria-selected="true">Rotation</button>
+                                    <button type="button" class="eagle-pill" data-slide-target="1" role="tab" aria-selected="false">Gas</button>
+                                    <button type="button" class="eagle-pill" data-slide-target="2" role="tab" aria-selected="false">Stars</button>
+                                    <button type="button" class="eagle-pill" data-slide-target="3" role="tab" aria-selected="false">DM Halo</button>
+                                </div>
+
                                 <div class="sim-atlas-body">
-                                    <h3 class="sim-atlas-title">The EAGLE Project: Galaxy Assembly &amp; Environments</h3>
-                                    <p class="sim-atlas-desc">
-                                        The <a href="https://astro.dur.ac.uk/ICC/Eagle/highlights.php" target="_blank" rel="noopener noreferrer">EAGLE cosmological hydrodynamical simulation suite</a> (<a href="https://academic.oup.com/mnras/article/446/1/521/1316115" target="_blank" rel="noopener noreferrer">Schaye et al. 2015</a>; <a href="https://academic.oup.com/mnras/article/450/2/1937/984366" target="_blank" rel="noopener noreferrer">Crain et al. 2015</a>) models 7 billion particles across a 100 cMpc volume, predicting the distribution of H I Lyman limit systems and warm-hot O VI/Ne VIII halos in group environments.
+                                    <h3 class="sim-atlas-title" id="eagle-title">Time Evolution in EAGLE: Galaxy Assembly</h3>
+                                    <p class="sim-atlas-desc" id="eagle-desc">
+                                        Multi-angle cuts and dynamical projections through the <a href="https://astro.dur.ac.uk/ICC/Eagle/highreader.php?page=evo" target="_blank" rel="noopener noreferrer">EAGLE cosmological volume</a> (<a href="https://academic.oup.com/mnras/article/446/1/521/1316115" target="_blank" rel="noopener noreferrer">Schaye et al. 2015</a>; <a href="https://academic.oup.com/mnras/article/450/2/1937/984366" target="_blank" rel="noopener noreferrer">Crain et al. 2015</a>), tracking the co-evolution of diffuse gas, stellar disks, and dark matter haloes across cosmic time.
                                     </p>
                                     <div class="sim-atlas-credit">
-                                        Credit: J. Schaye, R. A. Crain &amp; <a href="https://astro.dur.ac.uk/ICC/Eagle/highlights.php" target="_blank" rel="noopener noreferrer">The EAGLE Collaboration (Durham / Leiden)</a>
+                                        Credit: J. Schaye, R. A. Crain &amp; <a href="https://astro.dur.ac.uk/ICC/Eagle/highreader.php?page=evo" target="_blank" rel="noopener noreferrer">The EAGLE Project (Durham ICC / Leiden)</a> &bull; <a href="https://astro.dur.ac.uk/ICC/Eagle/highreader.php?page=evo" target="_blank" rel="noopener noreferrer">Time Evolution Archive &nearr;</a>
                                     </div>
                                 </div>
                             </article>

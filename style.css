@@ -1143,6 +1143,119 @@ header#site-header.scrolled {
     font-size: 0.64rem;
     padding: 0.2rem 0.5rem;
     border-radius: var(--radius-xs);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* EAGLE Multi-View Evolution Slider */
+.eagle-slider-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background-color: #020408;
+    overflow: hidden;
+}
+
+.eagle-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    background-color: #020408;
+}
+
+.eagle-slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.eagle-slide img,
+.eagle-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.eagle-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(4, 8, 16, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0 0 2px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.eagle-arrow:hover {
+    background: rgba(14, 165, 233, 0.45);
+    border-color: var(--accent-cold);
+    color: #fff;
+    transform: translateY(-50%) scale(1.12);
+}
+
+.eagle-arrow-prev {
+    left: 0.6rem;
+}
+
+.eagle-arrow-next {
+    right: 0.6rem;
+}
+
+.eagle-pill-bar {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.55rem 0.85rem;
+    background: rgba(8, 13, 23, 0.75);
+    border-bottom: 1px solid var(--border-hairline);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.eagle-pill {
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-hairline);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+}
+
+.eagle-pill:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: var(--border-strong);
+    color: var(--text-primary);
+}
+
+.eagle-pill.active {
+    background: rgba(14, 165, 233, 0.18);
+    border-color: var(--accent-cold);
+    color: var(--accent-cold);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
 }
 
 .sim-atlas-body {
