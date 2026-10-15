@@ -761,7 +761,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   01 // COSMOLOGICAL SIMULATIONS & SIGHTLINE THEATRE (#simulations)
+   01 — COSMOLOGICAL SIMULATIONS & SIGHTLINE THEATRE (#simulations)
    -------------------------------------------------------------------------- */
 .sim-theatre-shell {
     background-color: var(--bg-surface);
@@ -1408,7 +1408,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   02 // RESEARCH ARCHITECTURE & ACTIVE INVESTIGATIONS (#research)
+   02 — RESEARCH ARCHITECTURE & ACTIVE INVESTIGATIONS (#research)
    -------------------------------------------------------------------------- */
 .research-ledger {
     display: grid;
@@ -1479,7 +1479,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   03 // PUBLICATIONS & MANUSCRIPTS (#publications)
+   03 — PUBLICATIONS & MANUSCRIPTS (#publications)
    -------------------------------------------------------------------------- */
 .pub-ledger {
     display: flex;
@@ -1636,7 +1636,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   04 // LIVE LAMBDA-CDM COSMOLOGY CALCULATOR & ANDROID APP (#software)
+   04 — LIVE LAMBDA-CDM COSMOLOGY CALCULATOR & ANDROID APP (#software)
    -------------------------------------------------------------------------- */
 .cosmo-workbench {
     display: grid;
@@ -1720,7 +1720,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   05 // CURRICULUM VITAE, TECHNICAL ARSENAL & WORKSHOPS (#cv)
+   05 — CURRICULUM VITAE, TECHNICAL ARSENAL & WORKSHOPS (#cv)
    -------------------------------------------------------------------------- */
 .cv-ledger-grid {
     display: grid;
@@ -1817,7 +1817,7 @@ header#site-header.scrolled {
 }
 
 /* --------------------------------------------------------------------------
-   06 // OUTREACH, PEDAGOGY, PERSONAL INTERESTS & GALLERY
+   06 — OUTREACH, PEDAGOGY, PERSONAL INTERESTS & GALLERY
    -------------------------------------------------------------------------- */
 .dual-editorial-grid {
     display: grid;

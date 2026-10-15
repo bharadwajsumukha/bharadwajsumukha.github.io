@@ -494,35 +494,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8-Panel Diagnostic Inspector Data (Zinger et al. 2020, TNG100 Halo #194946)
     const panelDescriptions = {
         stars: {
-            title: 'Panel 01 // Stellar Surface Density (Σ*)',
+            title: 'Panel 01: Stellar Surface Density (Σ*)',
             desc: 'Tracks the morphological transformation and hierarchical assembly of the central galaxy in TNG100 Halo #194946 up to M* = 2 × 10¹¹ M☉ at z = 0, alongside incoming satellite galaxies and tidal stellar streams.'
         },
         temp: {
-            title: 'Panel 02 // Gas Temperature (T)',
+            title: 'Panel 02: Gas Temperature (T)',
             desc: 'Reveals the coexistence of cool (T ~ 10⁴–10⁴.⁵ K) filamentary inflows and virialized warm-hot (T ~ 10⁵.⁵–10⁷ K) halo plasma heated by accretion shocks and supermassive black hole (SMBH) kinetic feedback.'
         },
         pressure: {
-            title: 'Panel 03 // Thermal Gas Pressure (P)',
+            title: 'Panel 03: Thermal Gas Pressure (P)',
             desc: 'Illustrates outward-propagating shock fronts and pressure cavities inflated by episodic AGN feedback bursts, which regulate the hydrostatic balance of the inner circumgalactic medium.'
         },
         metallicity: {
-            title: 'Panel 04 // Gas-Phase Metallicity (Z / Z☉)',
+            title: 'Panel 04: Gas-Phase Metallicity (Z / Z☉)',
             desc: 'Contrasts chemically pristine/sub-solar intergalactic accretion streams (such as the log(Z/Z☉) = -1.05 partial Lyman limit absorber toward LBQS 0107-0235) against metal-enriched bipolar outflows.'
         },
         density: {
-            title: 'Panel 05 // Hydrogen Number Density (n_H)',
+            title: 'Panel 05: Hydrogen Number Density (n_H)',
             desc: 'Maps dense circumgalactic clumps and filaments (n_H ~ 10⁻³ cm⁻³) embedded within a tenuous halo medium (n_H < 10⁻⁴.⁵ cm⁻³). Crucial for Cloudy photoionization modeling of Lyman limit and metal-line absorbers.'
         },
         entropy: {
-            title: 'Panel 06 // Specific Gas Entropy (K ∝ T · n_H⁻²/³)',
+            title: 'Panel 06: Specific Gas Entropy (K ∝ T · n_H⁻²/³)',
             desc: 'As highlighted in Zinger et al. (2020), SMBH kinetic winds lift central CGM entropy, increasing cooling times and acting as "preventive feedback" that quenches late-time star formation.'
         },
         tcool: {
-            title: 'Panel 07 // Radiative Cooling Time (t_cool)',
+            title: 'Panel 07: Radiative Cooling Time (t_cool)',
             desc: 'Compares local radiative cooling timescales against the halo free-fall time. Low-t_cool filaments condense into multiphase Mg II and H I absorbers, while high-entropy cavities remain hot over Gyr timescales.'
         },
         vrad: {
-            title: 'Panel 08 // Radial Velocity Field (v_rad)',
+            title: 'Panel 08: Radial Velocity Field (v_rad)',
             desc: 'Separates infalling cold-mode accretion streams (v_rad < 0, blue/inward) aligned with the major axis from high-velocity feedback-driven outflows (v_rad > 0, red/outward) escaping into the IGM.'
         }
     };
@@ -557,22 +557,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const eagleViews = [
             {
-                badge: 'EAGLE // ROTATION OVERVIEW',
+                badge: 'EAGLE • ROTATION OVERVIEW',
                 title: 'Time Evolution in EAGLE: Rotation & Assembly',
                 desc: 'Multi-angle projection of galaxy time-evolution in the EAGLE 100 cMpc simulation suite, illustrating how angular momentum and filamentary accretion govern galactic disk morphology.'
             },
             {
-                badge: 'EAGLE // GAS EVOLUTION',
+                badge: 'EAGLE • GAS EVOLUTION',
                 title: 'EAGLE Time Evolution: Diffuse & Cool Gas',
                 desc: 'Tracks the cosmic evolution of the gas component: cold-mode filamentary inflows feed galaxy disks, while supernovae and AGN feedback drive high-velocity shocks into the surrounding circumgalactic medium.'
             },
             {
-                badge: 'EAGLE // STARS EVOLUTION',
+                badge: 'EAGLE • STARS EVOLUTION',
                 title: 'EAGLE Time Evolution: Stellar Assembly',
                 desc: 'Visualizes hierarchical stellar assembly over 13.8 billion years: high-redshift starbursts condense in dark matter overdensities, followed by major/minor mergers and modern disk settling.'
             },
             {
-                badge: 'EAGLE // DM HALO EVOLUTION',
+                badge: 'EAGLE • DM HALO EVOLUTION',
                 title: 'EAGLE Time Evolution: Dark Matter Halo Assembly',
                 desc: 'Traces the underlying gravitational skeleton of the cosmic web: dissipationless dark matter halo growth, subhalo accretion, and tidal stripping that define the potential wells hosting cosmic baryons.'
             }
