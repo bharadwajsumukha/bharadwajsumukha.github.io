@@ -1137,12 +1137,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const olInput = document.getElementById('cosmo-ol');
     const cosmoPresetBtns = document.querySelectorAll('.cosmo-z-preset');
 
+    function parseSafeFloat(val, fallback) {
+        const n = parseFloat(val);
+        return Number.isFinite(n) ? n : fallback;
+    }
+
     function computeCosmology() {
         if (!zInput || !h0Input || !omInput || !olInput) return;
-        const z = Math.max(0, Math.min(25, parseFloat(zInput.value) || 0.87641));
-        const H0 = Math.max(20, Math.min(120, parseFloat(h0Input.value) || 67.74));
-        const Om = Math.max(0.01, Math.min(1.5, parseFloat(omInput.value) || 0.3089));
-        const OL = Math.max(0.0, Math.min(1.5, parseFloat(olInput.value) || 0.6911));
+        const z = Math.max(0, Math.min(25, parseSafeFloat(zInput.value, 0.87641)));
+        const H0 = Math.max(20, Math.min(120, parseSafeFloat(h0Input.value, 67.74)));
+        const Om = Math.max(0.01, Math.min(1.5, parseSafeFloat(omInput.value, 0.3089)));
+        const OL = Math.max(0.0, Math.min(1.5, parseSafeFloat(olInput.value, 0.6911)));
         const Ok = 1.0 - Om - OL;
 
         const c_kms = 299792.458;
